@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
-import { SearchComponent } from './footer/search/search.component';
-import { ChatComponent } from './chat/chat.component';
-import { SliderComponent } from './slider/slider.component';
+
+
+
 import { ContactComponent } from './contact/contact.component';
 import { WhyUsComponent } from './why-us/why-us.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -36,9 +36,6 @@ import { VideoPipe } from './why-us/video.pipe';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    SearchComponent,
-    ChatComponent,
-    SliderComponent,
     ContactComponent,
     WhyUsComponent,
     NavbarComponent,
