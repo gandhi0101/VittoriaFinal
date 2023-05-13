@@ -1,0 +1,36 @@
+.pru{
+  border: 5px;
+  background-color: aqua;
+  height: 100px;
+}
+.example-container {
+  margin-top: 30px;
+    overflow: auto;
+    width: 70%;
+
+  }
+  
+ .titulo{
+  width: 70%;
+ }
+
+ .alert{
+  margin: 20px 20px 20px 20px;
+ }
+  
+  .table {
+    width: 70%;
+  }
+
+  .example-container::-webkit-scrollbar {
+    width: 8px;               /* width of the entire scrollbar */
+  }
+  
+  .example-container::-webkit-scrollbar-track {
+    background: rgba(187, 170, 170, 0);        /* color of the tracking area */
+  }
+  
+  .example-container::-webkit-scrollbar-thumb {
+    background-color: rgb(143, 143, 143);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }

@@ -1,0 +1,67 @@
+// Define some variables
+$bgcolor: black;
+$textcolor: white;
+$font: Arial, sans-serif;
+
+// Define a mixin for centering elements
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Style the footer
+footer {
+    margin-top: 15px;
+    background-color: $bgcolor;
+    padding: 30px;
+    text-align: justify;
+    color: $textcolor;
+    font-family: $font;
+
+    .col{
+        padding: 1rem;
+        h5{
+            text-align: center;
+            font-size: 20px;
+        }
+    
+        #navegador{
+            font-size: 15px;
+            a{
+                text-decoration: none;
+                color: white
+            }
+        }
+
+        #contact{
+            font-size: 15px;
+            margin: 20px;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: $textcolor;
+            }
+        }
+    
+        // Style the social media icons
+        #social-media {
+            @include center; // Use the mixin
+            list-style: none;
+            margin: 0;
+            li{
+                width: 32px;
+                height: 32px;
+                margin: 10px;
+            }
+    
+        }
+    }
+
+    
+}
+
+.fab {
+    font-size: 32px;
+    color: blue;
+}

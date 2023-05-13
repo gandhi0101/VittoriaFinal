@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body::-webkit-scrollbar {
+    width: 12px;           
+    overflow-y: hidden;    /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgba(26, 25, 25, 0.932);        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(68, 68, 68);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+
+

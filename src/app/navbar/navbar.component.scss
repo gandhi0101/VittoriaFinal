@@ -1,0 +1,43 @@
+p {
+    font-family: Lato;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 4px;
+    font-size: 25px;
+}
+
+nav a:visited, a:link{
+    color: black;
+    font-weight: bolder;
+}
+
+nav a:hover{
+    color: white;
+    background-color: #cfd8dc60;
+}
+
+nav a.active{
+    color: #039be5;
+}
+
+a {
+    margin-right: 7px;
+}
+
+@media screen and (max-width: 500px) {
+    nav a {
+        display: block;
+        margin: 5px;
+    }
+}

@@ -1,0 +1,31 @@
+<app-seach (nombre)="ver($event)"></app-seach>
+<ng-container *ngIf="index !== -1 else noexiste">
+    <mat-card> <!--Componente de Material-->
+        <mat-card-content>
+    <div class="card p3 mt-2 container">
+        <div class="card-block">
+            <div class="card-title">
+               <p> Nombre: {{datos.nombre}}</p>
+            </div>
+            <div class="text">
+                <p> Correo: {{datos.correo}}</p>
+            </div>
+            <div class="text">
+                <p>Fecha: {{datos.fecha}}</p>
+            </div>
+            <div class="text">
+                <p><small>Hora: {{datos.hora}}</small></p>
+            </div>
+        </div>
+    </div>
+</mat-card-content>
+</mat-card>
+</ng-container>
+
+<ng-template #noexiste>
+    <p>{{mensaje}}</p>
+</ng-template>
+
+
+  
+  

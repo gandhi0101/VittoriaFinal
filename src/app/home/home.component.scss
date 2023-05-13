@@ -1,0 +1,135 @@
+$animation-duration: 3s;
+
+// Define los keyframes para la animación
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.bienvenida {
+
+    padding: 50px;
+    text-align: center;
+    background-image: linear-gradient(35deg, #493836, #392f2f, #292626, #191d1d, #071514);
+    animation: gradient 15s ease infinite;
+    background-size: 400%;
+
+    #texto1,
+    #texto2 {
+        font-size: 3rem;
+    }
+
+    #texto1 {
+        color: #fff;
+    }
+
+    #texto2 {
+        color: lightgrey;
+    }
+
+    #texto3 {
+        margin-top: 30px;
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 50px;
+    }
+
+    #integrantes {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+        #integ1 {
+            text-align: center;
+            color: #fff;
+            margin-right: 20px;
+            text-decoration: none;
+
+            img {
+                width: 150px;
+                border-radius: 5rem;
+            }
+        }
+    }
+}
+
+.exp {
+    padding: 50px;
+
+    .card {
+        padding: 50px;
+    }
+
+    .col-md-4 {
+        padding: 20px;
+
+    }
+
+    .card-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .card-text {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+.menu{
+    margin-bottom: 20px;
+    .menuletra{
+        font-size: 50px;
+        margin-bottom: 30px;
+        color: #FFD700;
+    }
+
+    .container{
+        border: 1px solid black;
+        padding: 15px;
+        border-radius: 1rem;
+        background-image: linear-gradient(to right, #009246, #FFFFFF, #CE2B37); /* degradado rojo, blanco y verde */
+        .card{
+            .card-title{
+                font-size: 15px;
+                font-weight: bolder;
+                text-align: center;
+            }
+            .card-text{
+                text-align: justify;
+            }
+        }
+
+    }
+}
+
+.contenedor{
+    margin: 50px;
+    padding: 25px;
+    background-color: #292626;
+    border-radius: 1rem;
+    .masonry{
+        columns: 5;
+        column-width: 230px;
+        column-gap: 0.5em;
+        img{
+            max-width: 100%;
+            margin-bottom: 0.5em;
+            display: block;
+            border-radius: 1rem;
+        }
+    
+    
+    }
+}
