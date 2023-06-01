@@ -1,0 +1,12 @@
+<form class="form">
+    <p class="form-title">Registrar telefono</p>
+    <div class="input-container">
+        <input placeholder="Nombre" type="text" />
+    </div>
+    <div class="input-container">
+        <input placeholder="Codigo" type="text" #codigo/>
+    </div>
+    <div class="input-container">
+    </div>
+    <button class="submit" type="submit" (click)="verificarCodigo(codigo.value)"  >LogIn</button>
+</form>

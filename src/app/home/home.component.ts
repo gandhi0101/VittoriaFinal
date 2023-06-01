@@ -15,9 +15,7 @@ export class HomeComponent {
   constructor(private httpclient:HttpClient){
     this.httpclient.get(this.url).subscribe( data => {
       this.httpData=data;
-      console.log(this.httpData);
       this.array=this.httpData.menu;
-      console.log(this.array);
     });
   }
 }
