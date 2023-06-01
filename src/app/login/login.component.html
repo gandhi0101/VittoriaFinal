@@ -1,0 +1,24 @@
+<div class="form-login">
+<form class="form" [formGroup]="loginUsuario" (ngSubmit)="login()">
+  <p class="form-title">LogIn</p>
+  <div class="input-container">
+    <input placeholder="Email" type="email" formControlName="email" />
+  </div>
+  <div class="input-container">
+    <input
+      placeholder="Contraseña"
+      type="password"
+      formControlName="password"
+    />
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="validacion !== ''">
+    {{ validacion }}
+  </div>
+  <button class="submit" type="submit">Sign in</button>
+
+  <p class="signup-link">
+    No tienes cuenta?
+    <a (click)="volver()">Volver</a>
+  </p>
+</form>
+</div>

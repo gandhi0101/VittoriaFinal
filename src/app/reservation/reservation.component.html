@@ -89,6 +89,7 @@
               </g>
             </svg>
           </div>
+          
         </div>
       </div>
       <div *ngIf="fecha && hora && personas else elseBlock">
@@ -98,7 +99,6 @@
           <br>
           <div class="selec text-center">{{fechaDisponible}} </div>
           <div *ngIf="spiner"></div>
-          
         <button class="boton" (click)="revisarPaso2()">Reservar</button>
       </div>
       <ng-template #elseBlock>
@@ -112,7 +112,6 @@
 </div>
 
 <div *ngIf="!paso2">
-  <!-- Aqui se se estan mandando las tres variables del formulario con herencia padre hijo -->
   <app-reservation2 [fecha2]="fecha" [hora2]="hora" [personas2]="personas"></app-reservation2>
 </div>
 

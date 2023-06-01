@@ -1,0 +1,89 @@
+<div class="contenido">
+    <div class="container">
+        <div class="radio-inputs">
+            Opciones:
+            <label>
+                <input checked="" class="radio-input" type="radio" name="engine" value="personas" [(ngModel)]="graficaSelecionada" (change)="actualizarPersonas()">
+                <span class="radio-tile">
+                    <span class="radio-icon">
+                        <svg id="Icons_Users" overflow="hidden" version="1.1" viewBox="0 0 96 96"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g>
+                                <circle cx="24" cy="30.8" r="9" />
+                                <circle cx="72" cy="30.8" r="9" />
+                                <path
+                                    d=" M 66 74.2 L 66 65.2 C 66 63.8 65.4 62.4 64.2 61.6 C 61.8 59.6 58.6 58.2 55.4 57.4 C 53.2 56.8 50.6 56.2 48 56.2 C 45.6 56.2 43 56.6 40.6 57.4 C 37.4 58.2 34.4 59.8 31.8 61.6 C 30.6 62.6 30 63.8 30 65.2 L 30 74.2 L 66 74.2 Z" />
+                                <circle cx="48" cy="44.8" r="9" />
+                                <path
+                                    d=" M 88.2 47.6 C 85.8 45.6 82.6 44.2 79.4 43.4 C 77.2 42.8 74.6 42.2 72 42.2 C 69.6 42.2 67 42.6 64.6 43.4 C 63.4 43.8 62.2 44.2 61 44.8 L 61 45 C 61 48.4 59.6 51.6 57.4 53.8 C 61.2 55 64.2 56.6 66.6 58.4 C 67.2 59 67.8 59.4 68.2 60.2 L 90 60.2 L 90 51.2 C 90 49.8 89.4 48.4 88.2 47.6 Z" />
+                                <path
+                                    d=" M 29.4 58.4 L 29.4 58.4 C 32.2 56.4 35.4 54.8 38.6 53.8 C 36.4 51.4 35 48.4 35 45 C 35 44.8 35 44.8 35 44.6 C 33.8 44.2 32.6 43.6 31.4 43.4 C 29.2 42.8 26.6 42.2 24 42.2 C 21.6 42.2 19 42.6 16.6 43.4 C 13.4 44.4 10.4 45.8 7.8 47.6 C 6.6 48.4 6 49.8 6 51.2 L 6 60.2 L 27.6 60.2 C 28.2 59.4 28.6 59 29.4 58.4 Z" />
+                            </g>
+                        </svg>
+                    </span>
+                    <span class="radio-label">Personas</span>
+                </span>
+            </label>
+            <label>
+                <input class="radio-input" type="radio" name="engine" value="sexo" [(ngModel)]="graficaSelecionada" (change)="actualizarSexo()" >
+                <span class="radio-tile">
+                    <span class="radio-icon">
+                        <img src="../../assets/media/icons8-sexo-50.png" alt="">
+                    </span>
+                    <span class="radio-label">Sexo</span>
+                </span>
+            </label>
+            <label>
+                <input class="radio-input" type="radio" name="engine" value="edades" [(ngModel)]="graficaSelecionada" (change)="actualizarEdades()" >
+                <span class="radio-tile">
+                    <span class="radio-icon">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="652.801px"
+                            height="652.801px" viewBox="0 0 652.801 652.801"
+                            style="enable-background:new 0 0 652.801 652.801;" xml:space="preserve">
+                            <g>
+                                <g id="_x35__16_">
+                                    <g>
+                                        <path
+                                            d="M142.8,408h40.8c22.542,0,40.8-18.279,40.8-40.801V326.4c0-22.542-18.258-40.8-40.8-40.8h-40.8 c-22.542,0-40.8,18.258-40.8,40.8v40.799C102,389.721,120.258,408,142.8,408z M142.8,326.4h40.8v40.799h-40.8V326.4z M469.2,571.199H510c22.542,0,40.801-18.258,40.801-40.799V489.6c0-22.541-18.259-40.799-40.801-40.799h-40.8 c-22.521,0-40.8,18.258-40.8,40.799V530.4C428.4,552.941,446.658,571.199,469.2,571.199z M469.2,489.6H510V530.4h-40.8V489.6z M469.2,408H510c22.542,0,40.801-18.279,40.801-40.801V326.4c0-22.542-18.259-40.8-40.801-40.8h-40.8 c-22.521,0-40.8,18.258-40.8,40.8v40.799C428.4,389.721,446.658,408,469.2,408z M469.2,326.4H510v40.799h-40.8V326.4z M550.801,40.8H469.2V20.4c0-11.261-9.139-20.4-20.399-20.4s-20.4,9.139-20.4,20.4v20.4h-204V20.4C224.4,9.139,215.261,0,204,0 s-20.4,9.139-20.4,20.4v20.4H102c-45.063,0-81.6,36.537-81.6,81.6v448.799c0,45.064,36.537,81.602,81.6,81.602h448.8 c45.063,0,81.6-36.537,81.6-81.602V122.4C632.4,77.336,595.864,40.8,550.801,40.8z M591.601,571.199 c0,22.543-18.258,40.801-40.8,40.801H102c-22.542,0-40.8-18.279-40.8-40.801V204h530.4V571.199z M591.601,163.2H61.2v-40.8 c0-22.542,18.258-40.8,40.8-40.8h81.6V102c0,11.261,9.139,20.4,20.4,20.4s20.4-9.139,20.4-20.4V81.6h204V102 c0,11.261,9.14,20.4,20.4,20.4S469.2,113.261,469.2,102V81.6h81.601c22.542,0,40.8,18.258,40.8,40.8V163.2z M306,571.199h40.8 c22.542,0,40.8-18.258,40.8-40.799V489.6c0-22.541-18.258-40.799-40.8-40.799H306c-22.521,0-40.8,18.258-40.8,40.799V530.4 C265.2,552.941,283.458,571.199,306,571.199z M306,489.6h40.8V530.4H306V489.6z M306,408h40.8c22.542,0,40.8-18.279,40.8-40.801 V326.4c0-22.542-18.258-40.8-40.8-40.8H306c-22.521,0-40.8,18.258-40.8,40.8v40.799C265.2,389.721,283.458,408,306,408z M306,326.4h40.8v40.799H306V326.4z M142.8,571.199h40.8c22.542,0,40.8-18.258,40.8-40.799V489.6 c0-22.541-18.258-40.799-40.8-40.799h-40.8c-22.542,0-40.8,18.258-40.8,40.799V530.4C102,552.941,120.258,571.199,142.8,571.199z M142.8,489.6h40.8V530.4h-40.8V489.6z" />
+                                    </g>
+                                </g>
+                            </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                        </svg>
+                    </span>
+                    <span class="radio-label">Eades</span>
+                </span>
+            </label>
+        </div>
+    </div>
+    <div *ngIf="!cargado" class="spinner">
+        <app-spinner></app-spinner>
+    </div>
+
+    <div class="container" *ngIf="graficaSelecionada=='sexo'" >
+        <canvas id="pastel"></canvas>
+    </div>
+    <div class="container" *ngIf="graficaSelecionada=='personas'" >
+        <canvas id="barras"></canvas>
+    </div>
+    <div class="container" *ngIf="graficaSelecionada=='edades'" >
+        <canvas id="barras2"></canvas>
+    </div>
+
+
+</div>

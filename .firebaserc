@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "victtory1-eef5c": {
+      "hosting": {
+        "Mini2": [
+          "victtory1-eef5c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "victtory1-eef5c"
+  }
+}

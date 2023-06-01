@@ -1,93 +1,127 @@
 <head>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <div class="contenedor">
   <div class="form">
-
     <span class="title">Datos personales</span>
-    <mat-progress-bar mode="determinate" value="100"></mat-progress-bar> <!--Componente de Material-->
+    <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+    <!--Componente de Material-->
     <span class="sub mb">Completa el fomulario para poder contactarte</span>
     <div class="container text-center">
       <div class="row">
-
         <div class="input-wrapper" class="col">
-          <input type="text" class="input" placeholder="Nombre Completo" [(ngModel)]="cliente.nombre">
-          <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" class="input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <input type="text" class="input" placeholder="Nombre Completo" [(ngModel)]="cliente.nombre" />
+          <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" class="input-icon"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
             <title>ic_username</title>
             <desc>Created with Sketch.</desc>
             <defs></defs>
-            <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                <g id="24-px-Icons" transform="translate(-27.000000, -27.000000)" stroke="#000000">
-                    <g id="ic_username" transform="translate(24.000000, 24.000000)">
-                        <g id="Profile">
-                            <g transform="translate(4.000000, 4.000000)" stroke-width="2">
-                                <circle id="Oval" cx="8" cy="4" r="4"></circle>
-                                <path d="M16,16 C16,11.581722 12.418278,8 8,8 C3.581722,8 0,11.581722 0,16" id="Oval-2"></path>
-                            </g>
-                        </g>
+            <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+              stroke-linejoin="round">
+              <g id="24-px-Icons" transform="translate(-27.000000, -27.000000)" stroke="#000000">
+                <g id="ic_username" transform="translate(24.000000, 24.000000)">
+                  <g id="Profile">
+                    <g transform="translate(4.000000, 4.000000)" stroke-width="2">
+                      <circle id="Oval" cx="8" cy="4" r="4"></circle>
+                      <path d="M16,16 C16,11.581722 12.418278,8 8,8 C3.581722,8 0,11.581722 0,16" id="Oval-2"></path>
                     </g>
+                  </g>
                 </g>
+              </g>
             </g>
-        </svg>
+          </svg>
         </div>
 
         <div class="input-wrapper" class="col">
-          <input type="email" class="input" placeholder="Correo" [(ngModel)]="cliente.correo">
+          <input type="email" class="input" placeholder="Correo" [(ngModel)]="cliente.correo" />
 
-          <svg version="1.1" id="Capa_1" class="input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-       <g>
-         <path d="M448,64H64C28.656,64,0,92.656,0,128v256c0,35.344,28.656,64,64,64h384c35.344,0,64-28.656,64-64V128
+          <svg version="1.1" id="Capa_1" class="input-icon" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px"
+            viewBox="0 0 512 512" style="enable-background: new 0 0 512 512" xml:space="preserve">
+            <g>
+              <path d="M448,64H64C28.656,64,0,92.656,0,128v256c0,35.344,28.656,64,64,64h384c35.344,0,64-28.656,64-64V128
            C512,92.656,483.344,64,448,64z M342.656,234.781l135.469-116.094c0.938,3,1.875,6,1.875,9.313v256
            c0,2.219-0.844,4.188-1.281,6.281L342.656,234.781z M448,96c2.125,0,4,0.813,6,1.219L256,266.938L58,97.219
            C60,96.813,61.875,96,64,96H448z M33.266,390.25C32.828,388.156,32,386.219,32,384V128c0-3.313,0.953-6.313,1.891-9.313
            L169.313,234.75L33.266,390.25z M64,416c-3.234,0-6.172-0.938-9.125-1.844l138.75-158.563l51.969,44.531
            C248.578,302.719,252.297,304,256,304s7.422-1.281,10.406-3.875l51.969-44.531l138.75,158.563C454.188,415.062,451.25,416,448,416
-           H64z"/>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       </svg>
+           H64z" />
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg>
         </div>
-        <div *ngIf="cliente.correo && cliente.nombre else elseBlock">
-          <button class="boton" (click)="nuevoCliente(); showModal()">Confirmar</button>
+        <div class="input-wrapper" class="col">
+          <input type="text" class="input" placeholder="Edad" [(ngModel)]="cliente.edad" />
+          <svg version="1.1" id="Capa_1" class="input-icon" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="652.801px" height="652.801px"
+          viewBox="0 0 652.801 652.801" style="enable-background:new 0 0 652.801 652.801;" xml:space="preserve">
+          <g>
+            <g id="_x35__16_">
+              <g>
+                <path
+                  d="M142.8,408h40.8c22.542,0,40.8-18.279,40.8-40.801V326.4c0-22.542-18.258-40.8-40.8-40.8h-40.8 c-22.542,0-40.8,18.258-40.8,40.8v40.799C102,389.721,120.258,408,142.8,408z M142.8,326.4h40.8v40.799h-40.8V326.4z M469.2,571.199H510c22.542,0,40.801-18.258,40.801-40.799V489.6c0-22.541-18.259-40.799-40.801-40.799h-40.8 c-22.521,0-40.8,18.258-40.8,40.799V530.4C428.4,552.941,446.658,571.199,469.2,571.199z M469.2,489.6H510V530.4h-40.8V489.6z M469.2,408H510c22.542,0,40.801-18.279,40.801-40.801V326.4c0-22.542-18.259-40.8-40.801-40.8h-40.8 c-22.521,0-40.8,18.258-40.8,40.8v40.799C428.4,389.721,446.658,408,469.2,408z M469.2,326.4H510v40.799h-40.8V326.4z M550.801,40.8H469.2V20.4c0-11.261-9.139-20.4-20.399-20.4s-20.4,9.139-20.4,20.4v20.4h-204V20.4C224.4,9.139,215.261,0,204,0 s-20.4,9.139-20.4,20.4v20.4H102c-45.063,0-81.6,36.537-81.6,81.6v448.799c0,45.064,36.537,81.602,81.6,81.602h448.8 c45.063,0,81.6-36.537,81.6-81.602V122.4C632.4,77.336,595.864,40.8,550.801,40.8z M591.601,571.199 c0,22.543-18.258,40.801-40.8,40.801H102c-22.542,0-40.8-18.279-40.8-40.801V204h530.4V571.199z M591.601,163.2H61.2v-40.8 c0-22.542,18.258-40.8,40.8-40.8h81.6V102c0,11.261,9.139,20.4,20.4,20.4s20.4-9.139,20.4-20.4V81.6h204V102 c0,11.261,9.14,20.4,20.4,20.4S469.2,113.261,469.2,102V81.6h81.601c22.542,0,40.8,18.258,40.8,40.8V163.2z M306,571.199h40.8 c22.542,0,40.8-18.258,40.8-40.799V489.6c0-22.541-18.258-40.799-40.8-40.799H306c-22.521,0-40.8,18.258-40.8,40.799V530.4 C265.2,552.941,283.458,571.199,306,571.199z M306,489.6h40.8V530.4H306V489.6z M306,408h40.8c22.542,0,40.8-18.279,40.8-40.801 V326.4c0-22.542-18.258-40.8-40.8-40.8H306c-22.521,0-40.8,18.258-40.8,40.8v40.799C265.2,389.721,283.458,408,306,408z M306,326.4h40.8v40.799H306V326.4z M142.8,571.199h40.8c22.542,0,40.8-18.258,40.8-40.799V489.6 c0-22.541-18.258-40.799-40.8-40.799h-40.8c-22.542,0-40.8,18.258-40.8,40.799V530.4C102,552.941,120.258,571.199,142.8,571.199z M142.8,489.6h40.8V530.4h-40.8V489.6z" />
+              </g>
+            </g>
+          </g>
+          <g> </g>
+          <g> </g>
+          <g> </g>
+          <g> </g>
+          <g> </g>
+          <g> </g>
+          <g> </g>
+          <g> </g>
+          <g> </g>
+          <g> </g>
+          <g> </g>
+          <g> </g>
+          <g> </g>
+          <g> </g>
+          <g> </g>
+        </svg>
+        </div>
+        <div class="mydict">
+          <div>
+            <img src="../../assets/media/icons8-sexo-50.png" class="input-icon" alt="" style="margin-top: 40px;">
+            <label>
+              <input type="radio" name="radio"  checked="" value="mujer" [(ngModel)]="cliente.sexo" />
+              <span>Mujer</span>
+            </label>
+           
+            <label>
+              <input type="radio" name="radio"value="hombre" [(ngModel)]="cliente.sexo" />
+              <span>Hombre</span>
+            </label>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div *ngIf="cliente.correo && cliente.nombre; else elseBlock">
+          <button class="boton" (click)="onSubmit()">Confirmar</button>
         </div>
         <ng-template #elseBlock>
           <div>
-            <span class="sub">Complete los <span style="color: red;">dos campos</span></span>
-            <button class="boton" disabled style="background-color: grey;">Confirmar</button>
+            <br>
+            <br>
+            <span class="sub">Complete los <span style="color: red">dos campos</span></span>
+            <button class="boton" disabled style="background-color: grey">
+              Confirmar
+            </button>
           </div>
         </ng-template>
       </div>

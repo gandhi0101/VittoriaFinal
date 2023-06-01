@@ -1,31 +1,43 @@
 <app-seach (nombre)="ver($event)"></app-seach>
-<ng-container *ngIf="index !== -1 else noexiste">
-    <mat-card> <!--Componente de Material-->
-        <mat-card-content>
-    <div class="card p3 mt-2 container">
-        <div class="card-block">
-            <div class="card-title">
-               <p> Nombre: {{datos.nombre}}</p>
-            </div>
-            <div class="text">
-                <p> Correo: {{datos.correo}}</p>
-            </div>
-            <div class="text">
-                <p>Fecha: {{datos.fecha}}</p>
-            </div>
-            <div class="text">
-                <p><small>Hora: {{datos.hora}}</small></p>
-            </div>
+<br>
+<div *ngFor="let datos of datos">
+<div class="card" *ngIf="index !== -1 else noexiste" >
+    <div class="card-top-part">
+      <div class="left-part">
+        <div class="user-name">
+          <p class="name">{{datos.nombre}}</p>
+          <p class="role"></p>
         </div>
+        <div class="user-position">
+          <p class="position">
+            Correo:{{datos.correo}}
+        </p>
+        </div>
+      </div>
+      <div class="right-part">
+        <div class="user-photo" *ngIf="datos.sexo=='hombre' else mujer">
+          <img src="https://definicion.de/wp-content/uploads/2019/07/perfil-de-usuario.png" class="photo">
+        </div>
+        <ng-template class="user-photo" #mujer>
+          <img src="https://static.vecteezy.com/system/resources/previews/001/840/660/non_2x/woman-icon-for-user-profile-female-icon-human-or-people-sign-and-symbol-free-vector.jpg" alt="">
+        </ng-template>
+      </div>
     </div>
-</mat-card-content>
-</mat-card>
-</ng-container>
+    <div class="card-bottom-part">
+      <div class="bottom-part">
+            Fecha:{{datos.fecha}}
+      </div>
+      <div class="bottom-part">
+            Hora:{{datos.hora}}
+      </div>
+    </div>
+  </div>
+</div>
 
 <ng-template #noexiste>
     <p>{{mensaje}}</p>
 </ng-template>
 
 
-  
+
   

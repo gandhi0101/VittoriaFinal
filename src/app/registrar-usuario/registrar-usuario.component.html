@@ -1,0 +1,32 @@
+<div class="registro" *ngIf="!loading">
+<form (ngSubmit)="registrar()" class="form" [formGroup]="registrarUsuario">
+    <p class="form-title">Registrar</p>
+    <div class="input-container">
+      <input placeholder="Nombre" type="text" formControlName="nombre">
+  </div>
+     <div class="input-container">
+       <input placeholder="Email" type="email" formControlName="email">
+   </div>
+   <div class="input-container">
+       <input placeholder="Contraseña" type="password" formControlName="password">
+    </div>
+    <div class="input-container">
+        <input placeholder="Repetir password" type="password" formControlName="repetirPassword">
+     </div>
+
+     <div class="alert alert-danger" role="alert" *ngIf="validacion !== '' ">
+        {{validacion}}
+    </div>
+
+      <button class="submit" type="submit">
+     Sign in
+   </button>
+   <p class="signup-link">
+     Ya tienes cuenta?
+     <a (click)="login()">LogIn</a>
+   </p>
+</form>
+</div>
+<div class="spinner">
+<app-spinner *ngIf="loading"></app-spinner>
+</div>
