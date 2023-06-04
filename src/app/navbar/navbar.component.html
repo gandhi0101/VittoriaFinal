@@ -1,7 +1,7 @@
 <nav>
     <a [routerLink]="['home']" routerLinkActive="active">Inicio</a>
     <a [routerLink]="['about']" routerLinkActive="active">Sobre Nosotros</a>
-    <a *ngIf="!usuarioValido " [routerLink]="['/formulario-conacto']" routerLinkActive="active">contactanos</a>
+    <a *ngIf="!usuarioValido " [routerLink]="['formulario-conacto']" routerLinkActive="active">contactanos</a>
     <a *ngIf="usuarioValido || isAdmin" [routerLink]="['citas']" routerLinkActive="active">Citas</a>
     <a *ngIf="isAdmin" [routerLink]="['graficas']" routerLinkActive="active">Graficas</a>
     <a *ngIf="!usuarioValido &&  !isAdmin" (click)="reLogin()">Crear cuenta</a>

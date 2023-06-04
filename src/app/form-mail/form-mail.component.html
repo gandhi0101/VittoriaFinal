@@ -1,19 +1,25 @@
-<div class="form principal">
-    <p>Envia un correo </p>
+<div class="form principal" >
+    <h1>Envia un correo </h1>
     <div class="mb-3">
-        <label for="email" class="form-label">para:</label>
-        <input type="text" [(ngModel)]="user" class="form-control" id="user">
+        <label for="nombre" class="form-label">nombre</label>
+        <input type="text" [(ngModel)]="datosFormulario.nombre" class="form-control"
+            id="nombre">
+    </div>
+    
+    <div class="mb-3">
+        <label for="email" class="form-label">correo:</label>
+        <input type="text" [(ngModel)]="datosFormulario.user" class="form-control" id="user">
     </div>
 
     <div class="mb-3">
-        <label for="Subject" class="form-label">asunto</label>
-        <input type="text" [(ngModel)]="Subject" class="form-control"
-            id="Subject">
+        <label for="telefono" class="form-label">telefono</label>
+        <input type="text" [(ngModel)]="datosFormulario.telefono" class="form-control"
+            id="telefono">
     </div>
 
     <div class="mb-3">
         <label for="textarea" class="form-label">Texto</label>
-        <textarea [(ngModel)]="text" class="form-control"
+        <textarea [(ngModel)]="datosFormulario.text" class="form-control"
             id="text"></textarea>
 
     </div>
