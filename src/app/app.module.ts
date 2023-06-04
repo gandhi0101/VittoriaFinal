@@ -47,6 +47,7 @@ import { CitaService } from './cita.service';
 import { GraficasComponent } from './graficas/graficas.component';
 import { CargandoComponent } from './cargando/cargando.component';
 import { Chart } from 'chart.js/dist';
+import { FormMailComponent } from './form-mail/form-mail.component';
 
 
 
@@ -76,6 +77,7 @@ import { Chart } from 'chart.js/dist';
     LogintelefonoComponent,
     GraficasComponent,
     CargandoComponent,
+    FormMailComponent,
 
   ],
   imports: [

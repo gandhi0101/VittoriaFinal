@@ -20,6 +20,7 @@ export class GraficasComponent implements OnInit {
   mostrar: boolean = false;
   cargado:boolean=false;
   graficaSelecionada:string="";
+  graficaCargada:boolean=false;
 
   constructor(private clientSer: CitaService, private afAtth: AngularFireAuth, private grafico: GraficoService){
     
@@ -53,27 +54,34 @@ export class GraficasComponent implements OnInit {
           });
     });
 
-    setTimeout(()=>{
       this.cargado=true;
-    }, 2000)
+ 
   }
 
   actualizarPersonas(){
+    this.graficaCargada=false;
     setTimeout(()=>{
       this.grafico.double("Personas que asistiran por reservacion", 'Personas por reservacion', this.labelPersonas, this.personas, 'barras', 'bar');
+      this.graficaCargada=true;
     }, 2000)
+    
   }
 
   actualizarSexo(){
+    this.graficaCargada=false;
     setTimeout(()=>{
       this.grafico.double("Sexo", "Sexo M/F", this.labelSexo, this.sexo, "pastel", 'doughnut');
+      this.graficaCargada=true;
     }, 2000)
   }
 
   actualizarEdades(){
+    this.graficaCargada=false;
     setTimeout(()=>{
       this.grafico.double("Eades", "Cantidad", this.labelEdades, this.edades, "barras2", 'bar');
+      this.graficaCargada=true;
     }, 2000)
+    
   }
 
 

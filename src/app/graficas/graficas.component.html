@@ -76,14 +76,21 @@
     </div>
 
     <div class="container" *ngIf="graficaSelecionada=='sexo'" >
+        <div *ngIf="!graficaCargada" class="spinner">
+            <app-spinner></app-spinner>
+        </div>
         <canvas id="pastel"></canvas>
     </div>
     <div class="container" *ngIf="graficaSelecionada=='personas'" >
+        <div *ngIf="!graficaCargada" class="spinner">
+            <app-spinner></app-spinner>
+        </div>
         <canvas id="barras"></canvas>
     </div>
     <div class="container" *ngIf="graficaSelecionada=='edades'" >
+        <div *ngIf="!graficaCargada" class="spinner">
+            <app-spinner></app-spinner>
+        </div>
         <canvas id="barras2"></canvas>
     </div>
-
-
 </div>

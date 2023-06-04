@@ -11,33 +11,35 @@ import { LoginComponent } from './login/login.component';
 import { RegistrartelefonoComponent } from './registrartelefono/registrartelefono.component';
 import { LogintelefonoComponent } from './logintelefono/logintelefono.component';
 import { GraficasComponent } from './graficas/graficas.component';
+import { FormMailComponent } from './form-mail/form-mail.component';
 
 const routes: Routes = [
   {
     path: 'inicio',
     component: MainlayoutComponent,
     children: [
-      {path: 'home', component: HomeComponent},
-      {path: 'about', component: WhyUsComponent},
-      {path: 'contact', component: ContactComponent},
-      {path: 'citas', component: CitasComponent},
-      {path: 'graficas', component: GraficasComponent},
-      {path: 'about/:id/:user', component: WhyUsComponent},
-      {path: '**', pathMatch: 'full', redirectTo: 'home'}
+      { path: 'home', component: HomeComponent },
+      { path: 'about', component: WhyUsComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'citas', component: CitasComponent },
+      { path: 'graficas', component: GraficasComponent },
+      { path: 'about/:id/:user', component: WhyUsComponent },
+      { path: 'formulario-conacto', component: FormMailComponent },
+      { path: '**', pathMatch: 'full', redirectTo: 'home' }
     ]
   },
   {
     path: 'login',
     component: OpcionverificacionComponent,
     children: [
-      
+
     ]
   },
-  {path: 'correo', component: RegistrarUsuarioComponent},
-  {path: 'correologin', component: LoginComponent},
-  {path: 'telefono',component: RegistrartelefonoComponent},
-  {path: 'telefonologin', component: LogintelefonoComponent },
-  {path: '**', pathMatch: 'full', redirectTo: 'inicio'}
+  { path: 'correo', component: RegistrarUsuarioComponent },
+  { path: 'correologin', component: LoginComponent },
+  { path: 'telefono', component: RegistrartelefonoComponent },
+  { path: 'telefonologin', component: LogintelefonoComponent },
+  { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 ];
 
 
