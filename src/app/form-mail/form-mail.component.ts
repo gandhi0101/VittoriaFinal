@@ -20,9 +20,9 @@ export class FormMailComponent {
     nombre: undefined,
     telefono: undefined,
     showAlert: false,
-
+    mensaje: ``,
   };
-  mensaje?: string;
+
 
   constructor(private mailService: MailService, private fb: FormBuilder,) { }
 
@@ -34,7 +34,7 @@ export class FormMailComponent {
   insertar(): void {
     this.llenarDatos();
     if (this.datosFormulario.nombre !== undefined || this.datosFormulario.user !== undefined) {
-      this.mensaje = `<!DOCTYPE html>
+      this.datosFormulario.mensaje = `<!DOCTYPE html>
       <html lang="en">
       
       <head>
@@ -138,7 +138,7 @@ export class FormMailComponent {
       let body = {
         user: 'Gandhi2000@outlook.com',
         subject: this.datosFormulario.subject,
-        text: this.mensaje,
+        text: this.datosFormulario.mensaje,
         //text: this.text+`<br> nombre: ${this.nombre} <br> telefono: ${this.telefono} <br>correo:${this.user}`
       };
       this.reset();
