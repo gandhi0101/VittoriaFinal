@@ -1,6 +1,6 @@
 .principal {
     width: 800px;
-    height: 700px;
+    min-height: 00px;
     margin: 2% auto;
     background-color: rgba(70, 37, 18, 0.37);
     padding: 100px;
@@ -41,5 +41,9 @@
         font-size: 20px;
         color: white;
 
+    }
+    .ERROR{
+        //color: red;
+        font-size: small;
     }
 }
