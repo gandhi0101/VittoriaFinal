@@ -28,7 +28,7 @@ export class FormMailComponent {
 
   ngOnInit(): void {
     this.contactForm = this.llenaForm();
-    
+
   }
 
   insertar(): void {
@@ -142,6 +142,7 @@ export class FormMailComponent {
         //text: this.text+`<br> nombre: ${this.nombre} <br> telefono: ${this.telefono} <br>correo:${this.user}`
       };
       this.reset();
+      console.log(body);
       this.datosFormulario.showAlert = this.enviar(body);
       //this.form.reset();
     } else {
@@ -155,7 +156,9 @@ export class FormMailComponent {
     this.datosFormulario.telefono = undefined;
     this.datosFormulario.user = undefined;
 
-    
+    this.contactForm.reset()
+    this.llenarDatos
+    console.log(this.contactForm)
   }
   //HACER UQE SE BORRERN LOS DATOS MANDADOS DEL FORMULARIO!!! <<<<<<<<<<<<<<<<<<<<<<<<<<<<------------
 
@@ -177,11 +180,11 @@ export class FormMailComponent {
     return this.fb.group({
       nombre: ['', [Validators.required, Validators.minLength(3)]],
       user: ['', [Validators.required, Validators.email]],
-      telefono: ['', [Validators.required, Validators.minLength(10),Validators.pattern('^[0-9]+$')]],
+      telefono: ['', [Validators.required, Validators.minLength(10), Validators.pattern('^[0-9]+$')]],
       text: ['', [Validators.required, Validators.minLength(15)]]
     })
   }
-  llenarDatos():void{
+  llenarDatos(): void {
     this.datosFormulario.nombre = this.contactForm.value.nombre;
     this.datosFormulario.user = this.contactForm.value.user;
     this.datosFormulario.telefono = this.contactForm.value.telefono;
