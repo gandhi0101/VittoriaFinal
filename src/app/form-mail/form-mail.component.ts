@@ -11,6 +11,8 @@ import { from } from 'rxjs';
   styleUrls: ['./form-mail.component.scss']
 })
 export class FormMailComponent {
+  contactForm!: FormGroup;
+
   datosFormulario = {
     user: undefined,
     subject: 'Formulario de contacto 🐵🦁',
@@ -25,12 +27,12 @@ export class FormMailComponent {
   constructor(private mailService: MailService, private fb: FormBuilder,) { }
 
   ngOnInit(): void {
-
-
+    this.contactForm = this.llenaForm();
+    
   }
 
   insertar(): void {
-
+    this.llenarDatos();
     if (this.datosFormulario.nombre !== undefined || this.datosFormulario.user !== undefined) {
       this.mensaje = `<!DOCTYPE html>
       <html lang="en">
@@ -152,7 +154,10 @@ export class FormMailComponent {
     this.datosFormulario.nombre = undefined;
     this.datosFormulario.telefono = undefined;
     this.datosFormulario.user = undefined;
+
+    
   }
+  //HACER UQE SE BORRERN LOS DATOS MANDADOS DEL FORMULARIO!!! <<<<<<<<<<<<<<<<<<<<<<<<<<<<------------
 
   enviar(body: any): boolean {
     console.log(body);
@@ -167,6 +172,20 @@ export class FormMailComponent {
         return false;
       });
     return false;
+  }
+  llenaForm(): FormGroup {
+    return this.fb.group({
+      nombre: ['', [Validators.required, Validators.minLength(3)]],
+      user: ['', [Validators.required, Validators.email]],
+      telefono: ['', [Validators.required, Validators.minLength(10),Validators.pattern('^[0-9]+$')]],
+      text: ['', [Validators.required, Validators.minLength(15)]]
+    })
+  }
+  llenarDatos():void{
+    this.datosFormulario.nombre = this.contactForm.value.nombre;
+    this.datosFormulario.user = this.contactForm.value.user;
+    this.datosFormulario.telefono = this.contactForm.value.telefono;
+    this.datosFormulario.text = this.contactForm.value.text;
   }
 
 }
