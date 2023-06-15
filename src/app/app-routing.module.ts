@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistrartelefonoComponent } from './registrartelefono/registrartelefono.component';
 import { LogintelefonoComponent } from './logintelefono/logintelefono.component';
 import { GraficasComponent } from './graficas/graficas.component';
+import { QrcodeComponent } from './qrcode/qrcode.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
       {path: 'citas', component: CitasComponent},
       {path: 'graficas', component: GraficasComponent},
       {path: 'about/:id/:user', component: WhyUsComponent},
+      {path: 'qrcode', component: QrcodeComponent},
       {path: '**', pathMatch: 'full', redirectTo: 'home'}
     ]
   },
@@ -39,10 +41,6 @@ const routes: Routes = [
   {path: 'telefonologin', component: LogintelefonoComponent },
   {path: '**', pathMatch: 'full', redirectTo: 'inicio'}
 ];
-
-
-
-
 
 
 @NgModule({

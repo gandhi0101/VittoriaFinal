@@ -8,9 +8,9 @@ import { SafeUrl } from '@angular/platform-browser';
 })
 export class QrcodeComponent {
   mostrar!: boolean;
-  name: any;
-  foto: any;
-  myAngularxQrCode: any;
+  public name: any;
+  public foto: any;
+  public myAngularxQrCode: any;
   elementos: string[] = ['https://www.recetasnestle.com.mx/escuela-sabor/recetas-caseras/como-hacer-lasana',
     'recetasderechupete.com/ensalada-caprese-receta-facil-y-rapida-de-esta-ensalada-italiana/49628/',
     'https://www.bonappetit.com/recipe/simple-carbonara',
@@ -20,7 +20,7 @@ export class QrcodeComponent {
     '../../assets/images/pasta-carbonara.webp', '../../assets/images/rissoto.jpg', '../../assets/images/ossobusco.jpg'];
 
   nombre: string[]=["Lassaña","Capresse","Pasta Carbonara","Rissoto","Ossobusco"]
-  qrCodeDownloadLink: SafeUrl = '';
+  public qrCodeDownloadLink: SafeUrl = '';
   constructor() {
     const indiceAleatorio = Math.floor(Math.random() * this.elementos.length);
     this.myAngularxQrCode = this.elementos[indiceAleatorio];

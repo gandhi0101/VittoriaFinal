@@ -50,6 +50,7 @@ import { Chart } from 'chart.js/dist';
 import { QrcodeComponent } from './qrcode/qrcode.component';
 
 
+import { QRCodeModule } from 'angularx-qrcode';
 
 
 @NgModule({
@@ -97,7 +98,8 @@ import { QrcodeComponent } from './qrcode/qrcode.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    QRCodeModule
   ],
   providers: [CitasService, CitaService],
   bootstrap: [AppComponent]
