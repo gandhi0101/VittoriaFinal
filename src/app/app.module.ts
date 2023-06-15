@@ -48,8 +48,10 @@ import { GraficasComponent } from './graficas/graficas.component';
 import { CargandoComponent } from './cargando/cargando.component';
 import { Chart } from 'chart.js/dist';
 import { FormMailComponent } from './form-mail/form-mail.component';
+import { QrcodeComponent } from './qrcode/qrcode.component';
 
 
+import { QRCodeModule } from 'angularx-qrcode';
 
 
 @NgModule({
@@ -78,6 +80,7 @@ import { FormMailComponent } from './form-mail/form-mail.component';
     GraficasComponent,
     CargandoComponent,
     FormMailComponent,
+    QrcodeComponent,
 
   ],
   imports: [
@@ -97,7 +100,8 @@ import { FormMailComponent } from './form-mail/form-mail.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    QRCodeModule
   ],
   providers: [CitasService, CitaService],
   bootstrap: [AppComponent]
