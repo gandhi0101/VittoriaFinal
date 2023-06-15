@@ -48,11 +48,9 @@ import { GraficasComponent } from './graficas/graficas.component';
 import { CargandoComponent } from './cargando/cargando.component';
 import { Chart } from 'chart.js/dist';
 import { FormMailComponent } from './form-mail/form-mail.component';
-<<<<<<< HEAD
+
 import { AccesibilidadComponent } from './accesibilidad/accesibilidad.component';
-=======
 import { QrcodeComponent } from './qrcode/qrcode.component';
->>>>>>> 4187534540e3b4652a96dc605bd44f4ae626caa5
 
 
 import { QRCodeModule } from 'angularx-qrcode';
@@ -84,11 +82,8 @@ import { QRCodeModule } from 'angularx-qrcode';
     GraficasComponent,
     CargandoComponent,
     FormMailComponent,
-<<<<<<< HEAD
     AccesibilidadComponent,
-=======
     QrcodeComponent,
->>>>>>> 4187534540e3b4652a96dc605bd44f4ae626caa5
 
   ],
   imports: [

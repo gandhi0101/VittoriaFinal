@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AccesibilidadComponent } from '../accesibilidad/accesibilidad.component';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
  
+accs = new AccesibilidadComponent()
+  
 }

@@ -65,17 +65,18 @@ export class AccesibilidadComponent implements OnInit {
   }
 
   // Escala de grises
-  grayscale: boolean = false;
+  public grayscale: boolean = false;
 
   toggleGrayscale() {
     this.grayscale = !this.grayscale;
   }
 
   // Tamaños de letra
-  fontSize = 16; // Tamaño de letra inicial
+  public fontSize = 16; // Tamaño de letra inicial
 
   increaseFontSize() {
     this.fontSize += 2; // Incrementa el tamaño de letra en 2
+    //console.log(this.fontSize);
   }
 
   decreaseFontSize() {
