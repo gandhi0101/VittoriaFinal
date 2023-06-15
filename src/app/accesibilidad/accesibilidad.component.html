@@ -1,1 +1,12 @@
-<p>accesibilidad works!</p>
+
+<div class="dropdown" (click)="toggleDropdown()">
+    <img class="imgAcces" src="../assets/accesibilidad.png" alt="">
+    <ul [class.open]="isDropdownOpen" id="dropdown-menu" (click)="closeDropdown()">
+      <li class="containeraccs" style="display: flex;"> <button (click)="increaseFontSize()" ><img class="des" src="../assets/aumenta-el-tamano-de-la-fuente.png" alt=""></button><button (click)="decreaseFontSize()"><img class="des" src="../assets/disminuir-el-tamano-de-la-fuente.png" alt=""></button></li>
+      <li class="containeraccs"><button (click)="toggleGrayscale()"><img class="des" src="../assets/escala-de-grises.png" alt=""></button></li>
+      <li class="containeraccs"><button (click)="cambiarFuente()"><img class="des" src="../assets/redimensionar.png" alt=""></button></li>
+      <li class="containeraccs"><button (click)="reanudarLectura()"><img class="des" src="../assets/boton-de-play.png" alt=""></button>
+        <button (click)="pausarLectura()"><img class="des" src="../assets/boton-de-pausa.png" alt=""></button>
+        <button (click)="reiniciarLectura()"><img src="../assets/reanudar.png" class="des" alt=""></button></li>
+    </ul>
+  </div>
