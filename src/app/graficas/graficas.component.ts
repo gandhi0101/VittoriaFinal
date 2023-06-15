@@ -21,6 +21,19 @@ export class GraficasComponent implements OnInit {
   cargado:boolean=false;
   graficaSelecionada:string="";
   graficaCargada:boolean=false;
+  coloresBarras: string[] = [
+            'rgb(253, 108, 67)',
+            'rgb(139, 223, 218)',
+            'rgb(195, 238, 74)',
+            'rgb(131, 76, 200)',
+            'rgb(238, 142, 202)',
+            'rgb(7, 193, 148)',
+            'rgb(85, 102, 101)',
+            'rgb(128, 217, 148)',
+            'rgb(234, 236, 44)'
+          ];
+  coloresSexo: string[] = ['rgb(54, 162, 235)', 'rgb(255, 99, 132)'];  
+  coloresEdades: string[] = ['rgb(169, 193, 244)', 'rgb(7, 193, 148)', 'rgb(147, 67, 196)', 'rgb(254, 241, 110)'];      
 
   constructor(private clientSer: CitaService, private afAtth: AngularFireAuth, private grafico: GraficoService){
     
@@ -61,7 +74,7 @@ export class GraficasComponent implements OnInit {
   actualizarPersonas(){
     this.graficaCargada=false;
     setTimeout(()=>{
-      this.grafico.double("Personas que asistiran por reservacion", 'Personas por reservacion', this.labelPersonas, this.personas, 'barras', 'bar');
+      this.grafico.double("Personas que asistiran por reservacion", 'Personas por reservacion', this.labelPersonas, this.personas, 'barras', 'bar', this.coloresBarras);
       this.graficaCargada=true;
     }, 2000)
     
@@ -70,7 +83,7 @@ export class GraficasComponent implements OnInit {
   actualizarSexo(){
     this.graficaCargada=false;
     setTimeout(()=>{
-      this.grafico.double("Sexo", "Sexo M/F", this.labelSexo, this.sexo, "pastel", 'doughnut');
+      this.grafico.double("Sexo", "Sexo M/F", this.labelSexo, this.sexo, "pastel", 'doughnut', this.coloresSexo);
       this.graficaCargada=true;
     }, 2000)
   }
@@ -78,7 +91,7 @@ export class GraficasComponent implements OnInit {
   actualizarEdades(){
     this.graficaCargada=false;
     setTimeout(()=>{
-      this.grafico.double("Eades", "Cantidad", this.labelEdades, this.edades, "polar", 'polarArea');
+      this.grafico.double("Edades", "Cantidad", this.labelEdades, this.edades, "polar", 'polarArea', this.coloresEdades);
       this.graficaCargada=true;
     }, 2000)
     

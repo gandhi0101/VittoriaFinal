@@ -36,6 +36,12 @@ export class WhyUsComponent {
       case 'gerardo':
         this.panels.toArray()[3].open();
         break;
+      case 'armando':
+        this.panels.toArray()[4].open();
+        break;
+      case 'mariana':
+        this.panels.toArray()[5].open();
+        break;    
     }
   }
 

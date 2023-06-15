@@ -185,5 +185,39 @@
       </div>
     </mat-expansion-panel>
 
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header class="contenedor">
+        <mat-panel-title>
+          little engenier (programmer)
+        </mat-panel-title>
+        <mat-panel-description>
+          Biografía
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <h4 class="nombre">ING. Gerardo Vazquez Galindo</h4>
+      <div class="bio">
+        <img src="../../assets/media/integrantes/gerardo.jpg" alt="Gerardo Vazquez Galindo">
+        <div class="bio1" id="gerardo">
+          <p>Gerardo es un talentoso programador con una sólida formación académica en Ingeniería en Sistemas
+            Computacionales. Posee habilidades sólidas en programación de software, diseño de algoritmos y resolución de
+            problemas complejos. Es especialista en desarrollo web y está familiarizado con lenguajes como JavaScript,
+            HTML,
+            CSS y frameworks populares como React y Angular.
+
+            A lo largo de su carrera, Gerardo ha demostrado ser capaz de comprender los requisitos del cliente y
+            traducirlos
+            en soluciones funcionales y robustas. Su capacidad de aprendizaje rápido y su determinación lo han mantenido
+            en
+            la vanguardia de la industria de la programación.</p>
+            <div *ngIf="user == 'GerardoVazGa'; else noUser" class="githubPerfiles" >
+              <h1> {{user}}</h1>
+            <img [src]="safeUrl">
+          </div>
+          <ng-template #noUser>
+            <!-- <p></p> -->
+          </ng-template>
+        </div>
+      </div>
+    </mat-expansion-panel>
   </mat-accordion>
 </div>
