@@ -8,7 +8,7 @@ export class QrdataService {
 
   constructor( private httpClient: HttpClient) {
   }
-  reciveData(url:string, body:any ){
-    return this.httpClient.post(url, body).toPromise()
+  reciveData(url:string ){
+    return this.httpClient.get(url).toPromise()
   }
 }
