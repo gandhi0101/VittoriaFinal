@@ -1,0 +1,80 @@
+<div class="form principal" >
+    <h1>Envia un correo </h1>
+    <form (ngSubmit)="insertar()" [formGroup]="contactForm">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">nombre</label>
+            <input type="text"
+                   class="form-control"
+                   id="nombre"
+                   formControlName="nombre">
+            <div class="ERROR alert alert-danger" 
+                 *ngIf="contactForm.get('nombre')?.touched && contactForm.get('nombre')?.errors?.['required']"
+            >* This field is required</div>
+            <div class="ERROR alert alert-danger" 
+                 *ngIf="contactForm.get('nombre')?.touched && contactForm.get('nombre')?.errors?.['minlength']"
+                 >* name must be longer than {{contactForm.get('nombre')?.errors?.['minlength']?.requiredLength}} characters
+            </div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="email" class="form-label">correo:</label>
+            <input type="text" 
+                   class="form-control" 
+                   id="user"
+                   formControlName="user">
+            <div class="ERROR alert alert-danger" 
+                 *ngIf="contactForm.get('user')?.touched && contactForm.get('user')?.errors?.['required']"
+                 >* This field is required
+                </div>
+                <div class="ERROR alert alert-danger" 
+                 *ngIf="contactForm.get('user')?.touched && contactForm.get('user')?.errors?.['email']"
+                 >* Email is incorrect.
+                </div>
+        </div>
+    
+        <div class="mb-3">
+            <label for="telefono" class="form-label">telefono</label>
+            <input type="text"
+                   class="form-control"
+                   id="telefono"
+                   formControlName="telefono">
+                   <div class="ERROR alert alert-danger" 
+                        *ngIf="contactForm.get('telefono')?.touched && contactForm.get('telefono')?.errors?.['required']"
+                        >* This field is required 
+                       </div>
+                    <div class="ERROR alert alert-danger" 
+                       *ngIf="contactForm.get('telefono')?.touched && contactForm.get('telefono')?.errors?.['minlength']"
+                       >* number Phone must be longer than {{contactForm.get('telefono')?.errors?.['minlength']?.requiredLength}} numbers
+                    </div>
+                    <div class="ERROR alert alert-danger" 
+                       *ngIf="contactForm.get('telefono')?.touched && contactForm.get('telefono')?.errors?.['pattern']"
+                       >* only numbers
+                    </div>
+        </div>
+    
+        <div class="mb-3">
+            <label for="textarea" class="form-label">Texto</label>
+            <textarea  class="form-control"
+                       id="text"
+                       formControlName="text"></textarea>
+            <div class="ERROR alert alert-danger" 
+                 *ngIf="contactForm.get('text')?.touched && contactForm.get('text')?.errors?.['required']"
+                 >* This field is required
+                 </div>
+            <div class="ERROR alert alert-danger" 
+                 *ngIf="contactForm.get('text')?.touched && contactForm.get('text')?.errors?.['minlength']"
+                 >* text must be longer than {{contactForm.get('text')?.errors?.['minlength']?.requiredLength}} characters
+            </div>
+        </div>
+    
+        <div>
+            
+            <button type="submit" class="btn btn-primary bpn-personalizado"
+                    [disabled]="contactForm.invalid"
+                    >insertar</button>
+            
+    
+        </div>
+    </form>
+
+</div>

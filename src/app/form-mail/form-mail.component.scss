@@ -1,0 +1,49 @@
+.principal {
+    width: 800px;
+    min-height: 00px;
+    margin: 2% auto;
+    background-color: rgba(70, 37, 18, 0.37);
+    padding: 100px;
+    box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.441);
+    border-radius: 0 0 15px 15px;
+    font-size: x-large;
+    color: #5b5b5bce;
+    text-transform: uppercase;
+    $input-color: lightblue;
+    textarea {
+        width: 600px;   /* Ajusta el ancho del textarea */
+        height: 200px;  /* Ajusta la altura del textarea */
+      }
+
+    input,
+    textarea {
+
+        &:hover,
+        &:focus {
+            /* Estilos de hover cuando el input o textarea está seleccionado o con el foco */
+            /* Por ejemplo, puedes cambiar el color de fondo y el color del texto */
+            background-color: $input-color;
+            color: white;
+        }
+    }
+
+    .hovered {
+        background-color: $input-color;
+        color: white;
+    }
+
+
+    .bpn-personalizado {
+        width: 600px;
+        border-radius: 0;
+        background-color: rgb(50, 114, 223);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        color: white;
+
+    }
+    .ERROR{
+        //color: red;
+        font-size: small;
+    }
+}
