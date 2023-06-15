@@ -78,7 +78,7 @@ export class GraficasComponent implements OnInit {
   actualizarEdades(){
     this.graficaCargada=false;
     setTimeout(()=>{
-      this.grafico.double("Eades", "Cantidad", this.labelEdades, this.edades, "barras2", 'bar');
+      this.grafico.double("Eades", "Cantidad", this.labelEdades, this.edades, "polar", 'polarArea');
       this.graficaCargada=true;
     }, 2000)
     
