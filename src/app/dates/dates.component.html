@@ -5,9 +5,10 @@
 </div>
 
 <ng-template #cargado>
-  <div *ngIf="!citaCliente.length; else cita" class="alert alert-danger">No tiene citas por el momento</div>
+  <div *ngIf="!citaCliente.length; else cita" class="alert alert-danger">No hay citas por el momento</div>
   <ng-template #cita>
-    <div class="citas">
+
+    <div class="citas" *ngIf="!isAdmin">
       <div class="titulo">
         <h2>Citas</h2>
         <hr>
@@ -37,5 +38,73 @@
         </tbody>
       </table>
     </div>
+
+
+    <div class="citas" *ngIf="isAdmin">
+      <div class="titulo">
+        <h2>Citas</h2>
+        <hr>
+        <div>
+          <div class="mydict">
+            <div>
+              <label>
+                <input type="radio" name="radio" checked="" value="edad" [(ngModel)]="opcion">
+                <span>Edad</span>
+              </label>
+              <label>
+                <input type="radio" name="radio" value="personas" [(ngModel)]="opcion">
+                <span>Personas</span>
+              </label>
+              <label>
+                <input type="radio" name="radio" value="sexo" [(ngModel)]="opcion">
+                <span>Sexo</span>
+              </label>
+            </div>
+          </div>
+          <br>
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="edadOperador">Edad</label>
+            <input type="text" class="form-control" [(ngModel)]="edad">
+          </div>
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="personasOperador" >Personas</label>
+            <input type="text" class="form-control" [(ngModel)]="personas">
+          </div>
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="sexo">Sexo</label>
+            <select class="form-select" id="sexo" [(ngModel)]="sexo">
+              <option value="hombre">Masculino</option>
+              <option value="mujer">Femenino</option>
+            </select>
+          </div>
+          <button class="btn btn-dark" (click)="mostrar()">Buscar</button>
+        </div>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Fecha</th>
+            <th>Edad</th>
+            <th>Personas</th>
+            <th>Sexo</th>
+            <th>Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dato of citas">
+            <td>{{ dato.nombre }}</td>
+            <td>{{ dato.correo }}</td>
+            <td>{{ dato.fecha }}</td>
+            <td>{{ dato.edad }}</td>
+            <td>{{dato.personas}}</td>
+            <td>{{dato.sexo}}</td>
+            <td><button class="btn btn-outline-danger" (click)="onClickDelete(dato)">Borrar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </ng-template>
 </ng-template>
