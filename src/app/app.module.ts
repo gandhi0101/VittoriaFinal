@@ -49,7 +49,6 @@ import { CargandoComponent } from './cargando/cargando.component';
 import { Chart } from 'chart.js/dist';
 import { FormMailComponent } from './form-mail/form-mail.component';
 
-import { AccesibilidadComponent } from './accesibilidad/accesibilidad.component';
 import { QrcodeComponent } from './qrcode/qrcode.component';
 
 
@@ -82,7 +81,6 @@ import { QRCodeModule } from 'angularx-qrcode';
     GraficasComponent,
     CargandoComponent,
     FormMailComponent,
-    AccesibilidadComponent,
     QrcodeComponent,
 
   ],
