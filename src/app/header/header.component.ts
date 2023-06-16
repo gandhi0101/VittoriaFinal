@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AccesibilidadComponent } from '../accesibilidad/accesibilidad.component';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +6,5 @@ import { AccesibilidadComponent } from '../accesibilidad/accesibilidad.component
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
- 
-accs = new AccesibilidadComponent()
-  
+   
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AccesibilidadComponent } from '../accesibilidad/accesibilidad.component';
 import { HeaderComponent } from '../header/header.component';
 
 @Component({
