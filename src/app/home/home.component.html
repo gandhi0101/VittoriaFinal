@@ -1,132 +1,167 @@
-
 <div class="dropdown" (click)="toggleDropdown()">
     <img class="imgAcces" src="assets/accesibilidad/accesibilidad.png" alt="">
     <ul [class.open]="isDropdownOpen" id="dropdown-menu" (click)="closeDropdown()">
-      <li class="containeraccs" style="display: flex;"> 
-        <button (click)="increaseFontSize()"><img class="des" src="assets/accesibilidad/aumenta-el-tamano-de-la-fuente.png" alt=""></button>
-        <button (click)="decreaseFontSize()"><img class="des" src="assets/accesibilidad/disminuir-el-tamano-de-la-fuente.png" alt=""></button>
-      </li>
-      <li class="containeraccs"><button (click)="toggleGrayscale()"><img class="des" src="assets/accesibilidad/escala-de-grises.png" alt=""></button></li>
-      <li class="containeraccs"><button (click)="cambiarFuente()"><img class="des" src="assets/accesibilidad/redimensionar.png" alt=""></button></li>
-      <li class="containeraccs"><button (click)="reanudarLectura()"><img class="des" src="assets/accesibilidad/boton-de-play.png" alt=""></button>
-        <button (click)="pausarLectura()"><img class="des" src="assets/accesibilidad/boton-de-pausa.png" alt=""></button>
-        <button (click)="reiniciarLectura()"><img src="assets/accesibilidad/reanudar.png" class="des" alt=""></button></li>
+        <li class="containeraccs" style="display: flex;">
+            <button (click)="increaseFontSize()"><img class="des"
+                    src="assets/accesibilidad/aumenta-el-tamano-de-la-fuente.png" alt=""></button>
+            <button (click)="decreaseFontSize()"><img class="des"
+                    src="assets/accesibilidad/disminuir-el-tamano-de-la-fuente.png" alt=""></button>
+        </li>
+        <li class="containeraccs"><button (click)="toggleGrayscale()"><img class="des"
+                    src="assets/accesibilidad/escala-de-grises.png" alt=""></button></li>
+        <li class="containeraccs"><button (click)="cambiarFuente()"><img class="des"
+                    src="assets/accesibilidad/redimensionar.png" alt=""></button></li>
+        <li class="containeraccs"><button (click)="reanudarLectura()"><img class="des"
+                    src="assets/accesibilidad/boton-de-play.png" alt=""></button>
+            <button (click)="pausarLectura()"><img class="des" src="assets/accesibilidad/boton-de-pausa.png"
+                    alt=""></button>
+            <button (click)="reiniciarLectura()"><img src="assets/accesibilidad/reanudar.png" class="des"
+                    alt=""></button>
+        </li>
     </ul>
-  </div>
-  <!--fin menú accesibilidad-->
-
-<div class="bienvenida" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">
-    <h1 id="texto1" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">¡Bienvenidos al</h1>
-    <h1 id="texto2" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">Restaurante de comida Italiana Vittoria!</h1>
-    <p id="texto3" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">En nuestro restaurante podrán disfrutar de una gran variedad de platillos típicos de la gastronomía
-        italiana, desde las pastas más clásicas hasta las pizzas más exóticas, todo preparado con los ingredientes más
-        frescos y de la más alta calidad.
-
-        Nuestro objetivo es brindarles una experiencia gastronómica única, donde cada platillo sea una explosión de
-        sabor y cada bocado una aventura culinaria.
-    </p>
-    <div id="integrantes" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">
-        <a [routerLink]="['../about/gandhi/gandhi0101']" routerLinkActive="active">
-            <div id="integ1"><img src="../assets/media/integrantes/gandhi.jpg"
-                    [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-                <p>Gandhi Cabral Villareal</p>
-            </div>
-        </a>
-        <a [routerLink]="['../about/juan/juanMa281']" routerLinkActive="active">
-            <div id="integ1"><img src="../assets/media/integrantes/juan.jpg"
-                    [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-                <p>Juan Martinez Martinez</p>
-            </div>
-        </a>
-        <a [routerLink]="['../about/gerardo/GerardoVazGa']" routerLinkActive="active">
-            <div id="integ1"><img src="../assets/media/integrantes/gerardo.jpg"
-                    [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-                <p>Gerardo Vazquez Galindo</p>
-            </div>
-        </a>
-        <a [routerLink]="['../about/brayan/BrayanToledo12']" routerLinkActive="active">
-            <div id="integ1"><img src="../../assets/media/integrantes/brayan.jpeg"
-                    [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-                <p>Brayan Toledo Vera</p>
-            </div>
-        </a>
-        <!-- nuevos integrante -->
-        <a [routerLink]="['../about/armando/AEscareno7']" routerLinkActive="active">
-            <div id="integ1"><img src="../assets/media/integrantes/armando.jpeg"
-                    [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-                <p>Armando Escareño Perez</p>
-            </div>
-        </a>
-        <a [routerLink]="['../about/mariana/Mariana020221']" routerLinkActive="active">
-            <div id="integ1"><img src="../../assets/media/integrantes/mariana.jpg"
-                    [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-                <p>Mariana Tinajera Delgadillo </p>
-            </div>
-        </a>
-    </div>
 </div>
-<div class="exp">
-    <div class="card mb-3">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="../assets/media/lasana-comida.jpg" class="img-fluid rounded-start"
-                    [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">
-                    <h5 class="card-title" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">Experiencia en la cocina Italiana</h5>
-                    <p class="card-text" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">La comida italiana es muy variada y tiene una larga tradición culinaria que se
-                        remonta a siglos atrás. Algunos de los platos más populares son la pizza, la pasta, las carnes y
-                        pescados a la parrilla, las ensaladas y las sopas. La pasta es uno de los alimentos más
-                        emblemáticos de la cocina italiana y existen numerosas variedades de pasta, desde los tallarines
-                        hasta los raviolis o los espaguetis.</p>
-                    <p class="card-text" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">En nuestro restaurante italiano también podrás encontrar una gran variedad de
-                        pizzas, desde la clásica margarita hasta otras opciones con ingredientes como la mozzarella, el
-                        jamón, el champiñón, el pepperoni, entre otros.</p>
-                    <p class="card-text" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">Además, en la cocina de nuestro restaurante utilizamos una variedad de
-                        ingredientes frescos y de alta calidad, como los tomates, el aceite de oliva, las hierbas y las
-                        especias, lo que da lugar a sabores intensos y auténticos.</p>
+<!--fin menú accesibilidad-->
+<div id="contenido">
+    <div class="bienvenida" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">
+        <h1 id="texto1" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">¡Bienvenidos al</h1>
+        <h1 id="texto2" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">Restaurante de comida Italiana
+            Vittoria!</h1>
+        <p id="texto3" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">En nuestro restaurante podrán
+            disfrutar de una gran variedad de platillos típicos de la gastronomía
+            italiana, desde las pastas más clásicas hasta las pizzas más exóticas, todo preparado con los ingredientes
+            más
+            frescos y de la más alta calidad.
+
+            Nuestro objetivo es brindarles una experiencia gastronómica única, donde cada platillo sea una explosión de
+            sabor y cada bocado una aventura culinaria.
+        </p>
+        <div id="integrantes" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">
+            <a [routerLink]="['../about/gandhi/gandhi0101']" routerLinkActive="active">
+                <div id="integ1"><img src="../assets/media/integrantes/gandhi.jpg"
+                        [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
+                    <p>Gandhi Cabral Villareal</p>
                 </div>
-            </div>
+            </a>
+            <a [routerLink]="['../about/juan/juanMa281']" routerLinkActive="active">
+                <div id="integ1"><img src="../assets/media/integrantes/juan.jpg"
+                        [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
+                    <p>Juan Martinez Martinez</p>
+                </div>
+            </a>
+            <a [routerLink]="['../about/gerardo/GerardoVazGa']" routerLinkActive="active">
+                <div id="integ1"><img src="../assets/media/integrantes/gerardo.jpg"
+                        [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
+                    <p>Gerardo Vazquez Galindo</p>
+                </div>
+            </a>
+            <a [routerLink]="['../about/brayan/BrayanToledo12']" routerLinkActive="active">
+                <div id="integ1"><img src="../../assets/media/integrantes/brayan.jpeg"
+                        [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
+                    <p>Brayan Toledo Vera</p>
+                </div>
+            </a>
+            <!-- nuevos integrante -->
+            <a [routerLink]="['../about/armando/AEscareno7']" routerLinkActive="active">
+                <div id="integ1"><img src="../assets/media/integrantes/armando.jpeg"
+                        [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
+                    <p>Armando Escareño Perez</p>
+                </div>
+            </a>
+            <a [routerLink]="['../about/mariana/Mariana020221']" routerLinkActive="active">
+                <div id="integ1"><img src="../../assets/media/integrantes/mariana.jpg"
+                        [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
+                    <p>Mariana Tinajera Delgadillo </p>
+                </div>
+            </a>
         </div>
     </div>
-</div>
-
-<div class="menu" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">
-    <h1 class="menuletra text-center" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">Menú</h1>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col" *ngFor="let i of array">
-                <div class="card" style="width: 15rem; height: 500px; margin-bottom: 10px;">
-                    <img [src]="i.img" class="card-img-top"
+    <div class="exp">
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../assets/media/lasana-comida.jpg" class="img-fluid rounded-start"
                         [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">{{ i.name }}</h5>
-                        <p class="card-text" >Descripcion: <br> {{ i.body }}</p>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">
+                        <h5 class="card-title" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">
+                            Experiencia en la cocina Italiana</h5>
+                        <p class="card-text" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">La comida
+                            italiana es muy variada y tiene una larga tradición culinaria que se
+                            remonta a siglos atrás. Algunos de los platos más populares son la pizza, la pasta, las
+                            carnes y
+                            pescados a la parrilla, las ensaladas y las sopas. La pasta es uno de los alimentos más
+                            emblemáticos de la cocina italiana y existen numerosas variedades de pasta, desde los
+                            tallarines
+                            hasta los raviolis o los espaguetis.</p>
+                        <p class="card-text" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">En
+                            nuestro restaurante italiano también podrás encontrar una gran variedad de
+                            pizzas, desde la clásica margarita hasta otras opciones con ingredientes como la mozzarella,
+                            el
+                            jamón, el champiñón, el pepperoni, entre otros.</p>
+                        <p class="card-text" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">Además,
+                            en la cocina de nuestro restaurante utilizamos una variedad de
+                            ingredientes frescos y de alta calidad, como los tomates, el aceite de oliva, las hierbas y
+                            las
+                            especias, lo que da lugar a sabores intensos y auténticos.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="contenedor">
-    <div class="masonry">
-        <img src="../../assets/media/Masonry/img1.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-        <img src="../../assets/media/Masonry/img2.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-        <img src="../../assets/media/Masonry/img3.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-        <img src="../../assets/media/Masonry/img4.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-        <img src="../../assets/media/Masonry/img5.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-        <img src="../../assets/media/Masonry/img6.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-        <img src="../../assets/media/Masonry/img7.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-        <img src="../../assets/media/Masonry/img8.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-        <img src="../../assets/media/Masonry/img9.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-        <img src="../../assets/media/Masonry/img10.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-        <img src="../../assets/media/Masonry/img11.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-        <img src="../../assets/media/Masonry/img12.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-        <img src="../../assets/media/Masonry/img13.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-        <img src="../../assets/media/Masonry/img14.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-        <img src="../../assets/media/Masonry/img15.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
-        <img src="../../assets/media/Masonry/img16.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'" alt="">
+
+    <div class="menu" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">
+        <h1 class="menuletra text-center" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">Menú</h1>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col" *ngFor="let i of array">
+                    <div class="card" style="width: 15rem; height: 500px; margin-bottom: 10px;">
+                        <img [src]="i.img" class="card-img-top" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                            alt="">
+                        <div class="card-body">
+                            <h5 class="card-title" [style.fontSize.px]="fontSize" [style.font-family]="selectedFont">{{
+                                i.name }}</h5>
+                            <p class="card-text">Descripcion: <br> {{ i.body }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor">
+        <div class="masonry">
+            <img src="../../assets/media/Masonry/img1.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+            <img src="../../assets/media/Masonry/img2.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+            <img src="../../assets/media/Masonry/img3.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+            <img src="../../assets/media/Masonry/img4.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+            <img src="../../assets/media/Masonry/img5.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+            <img src="../../assets/media/Masonry/img6.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+            <img src="../../assets/media/Masonry/img7.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+            <img src="../../assets/media/Masonry/img8.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+            <img src="../../assets/media/Masonry/img9.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+            <img src="../../assets/media/Masonry/img10.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+            <img src="../../assets/media/Masonry/img11.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+            <img src="../../assets/media/Masonry/img12.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+            <img src="../../assets/media/Masonry/img13.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+            <img src="../../assets/media/Masonry/img14.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+            <img src="../../assets/media/Masonry/img15.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+            <img src="../../assets/media/Masonry/img16.jpg" [style.filter]="grayscale ? 'grayscale(100%)' : 'none'"
+                alt="">
+        </div>
     </div>
 </div>
-
