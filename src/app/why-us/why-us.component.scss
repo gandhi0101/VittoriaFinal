@@ -1,88 +1,88 @@
+/* Estilos base */
+
 .cuerpo {
     display: flex;
     flex-direction: row;
     margin: 20px;
+}
 
-    .carVid {
-        margin-top: 130px;
-        margin-left: 20px;
+.carVid {
+    margin-top: 130px;
+    margin-left: 20px;
+}
 
-        .carousel {
-            margin-bottom: 50px;
-            width: 530px;
-        }
+.carousel {
+    margin-bottom: 50px;
+    width: 530px;
+}
 
-    }
+.container {
+    display: grid;
+    place-items: center;
+    margin-left: 30px;
+    font-family: 'Dancing Script', cursive;
+    background: rgba(156, 143, 167, 0.308);
+    background: radial-gradient(circle, rgba(156, 143, 167, 0.123) 0%, rgba(0, 0, 0, 0.137) 56%);
+    border: 1px solid black;
+    padding: 15px;
+    font-size: 20px;
+    box-shadow: 8px 6px 10px gray;
+    border-radius: 16px;
+    color: black;
+}
 
-    .container {
-        display: grid;
-        place-items: center;
-        margin-left: 30px;
-        font-family: 'Dancing Script', cursive;
-        background: rgba(156, 143, 167, 0.308);
-        background: radial-gradient(circle, rgba(156, 143, 167, 0.123) 0%, rgba(0, 0, 0, 0.137) 56%);
-        border: 1px solid black;
-        padding: 15px;
-        font-size: 20px;
-        box-shadow: 8px 6px 10px gray;
-        border-radius: 16px;
-        color: black;
-
-        h2 {
-            font-size: 30px;
-            text-align: center;
-        }
-    }
+h2 {
+    font-size: 30px;
+    text-align: center;
 }
 
 .mat-mdc-form-field+.mat-mdc-form-field {
     margin-left: 8px;
-
 }
 
-.integ{
+.integ {
     margin: 20px;
-    .contenedor {
-        background-color: #fff;
-        border-radius: 10px;
-        padding: 30px 20px;
-        box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.021),
-            0px 59px 36px rgba(0, 0, 0, 0.05),
-            0px 26px 26px rgba(0, 0, 0, 0.09),
-            0px 7px 15px rgba(0, 0, 0, 0.041),
-            0px 15px 25px rgba(0, 0, 0, 0.1);
-    }
+}
 
-    .nombre{
-        margin: 0;
-        margin-top: 15px;
-        font-weight: bolder;
-    }
+.contenedor {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.021),
+        0px 59px 36px rgba(0, 0, 0, 0.05),
+        0px 26px 26px rgba(0, 0, 0, 0.09),
+        0px 7px 15px rgba(0, 0, 0, 0.041),
+        0px 15px 25px rgba(0, 0, 0, 0.1);
+}
 
-    .bio {
-        display: flex;
+.nombre {
+    margin: 0;
+    margin-top: 15px;
+    font-weight: bolder;
+}
 
-        img {
-            width: 15%;
-            height: 15%;
-            margin: 5px;
-        }
+.bio {
+    display: flex;
+}
 
-        .bio1 {
-            flex-direction: row;
-            img {
-                height: 600px;
-                width: 900px;
-        
-        
-            }
+img {
+    width: 15%;
+    height: 15%;
+    margin: 5px;
+}
 
-            p {
-                padding: 70px;
-                text-align: justify;
-            }
-        }
-    }
+.bio1 {
+    flex-direction: row;
+}
+
+img.bio1 {
+    height: 600px;
+    width: 900px;
+}
+
+p {
+    padding: 70px;
+    text-align: justify;
 }
 
 .contenido {
@@ -100,8 +100,6 @@
     img {
         height: 800px;
         width: 900px;
-
-
     }
 
     width: 900px;
@@ -112,4 +110,108 @@
     justify-content: center;
     border-radius: 10px;
     box-shadow: 10px 10px 15px black;
+}
+
+/* Media Queries para dispositivos móviles */
+
+@media (max-width: 767px) {
+    .cuerpo {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .carVid {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .container {
+        margin-left: 0;
+    }
+
+    .contenido {
+        width: 100%;
+    }
+
+    .githubPerfiles {
+        width: 100%;
+    }
+
+    img.bio1 {
+        height: auto;
+        width: 100%;
+    }
+
+    p {
+        padding: 20px;
+    }
+
+    .video{
+        width:250px;
+        height: 190px;
+    }
+}
+
+/* Media Queries para tablets */
+
+/* Media Queries para tablets */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .carVid {
+        margin-top: 80px;
+        margin-left: 10px;
+    }
+
+    .video{
+        height: 550px;
+    }
+
+    .mb-1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+    .container {
+        margin-left: 0px;
+    }
+
+    .contenido {
+        width: 100%;
+    }
+
+    .githubPerfiles {
+        width: 80%;
+    }
+}
+
+/* Media Queries para PC */
+
+@media (min-width: 1024px) {
+    .carVid {
+        margin-top: 130px;
+        margin-left: 20px;
+    }
+
+    .carousel {
+        width: 530px;
+    }
+
+    .container {
+        margin-left: 30px;
+    }
+
+    .contenido {
+        width: 560px;
+    }
+
+    .githubPerfiles {
+        width: 900px;
+    }
 }
