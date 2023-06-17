@@ -5,12 +5,21 @@ import { CitaService } from '../cita.service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import Swal from 'sweetalert2';
 
+import {collection, addDoc, doc, deleteDoc, WhereFilterOp} from 'firebase/firestore';
+import { query, where, getDocs } from "firebase/firestore";
+import { Firestore } from '@angular/fire/firestore';
+
 @Component({
   selector: 'app-dates',
   templateUrl: './dates.component.html',
   styleUrls: ['./dates.component.scss'],
 })
 export class DatesComponent implements OnInit {
+  
+  sexo:string="";
+  edad:number=0;
+  personas:number=0;
+
   displayedColumns = [
     'Nombre',
     'Correo',
@@ -24,23 +33,29 @@ export class DatesComponent implements OnInit {
   dataSource: Cliente[] = [];
   tam: string = '';
   isUpdate = false;
+  opcion:string="";
 
   clientes: Cliente[] = [];
   citaCliente: Cliente[] = [];
+  citas: any[] = [];
+  isAdmin:boolean=false;
 
   constructor(
     private clientesService: CitasService,
     private clientSer: CitaService,
-    private afAtth: AngularFireAuth
+    private afAtth: AngularFireAuth,
+    private firestore: Firestore
   ) {}
 
   ngOnInit(): void {
     this.clientSer.getCliente().subscribe((cliente) => {
-      this.clientes = cliente;
+      
       var i = 0;
       this.afAtth.authState.subscribe((user) => {
         if (user?.email == 'admin@gmail.com') {
           this.citaCliente=cliente;
+          this.isUpdate=true;
+          this.isAdmin=true;
         } else {
           cliente.forEach((element: Cliente) => {
 
@@ -64,15 +79,54 @@ export class DatesComponent implements OnInit {
     console.log(response);
   }
 
-  retornarTam() {
-    if (this.clientes.length <= 3) {
-      return (this.tam = '200px');
-    } else if (this.clientes.length >= 4 && this.clientes.length <= 8) {
-      return (this.tam = '400px');
-    } else {
-      return (this.tam = '600px');
-    }
+  async filtroSexo(){
+      this.citas=[];
+      const q = query(collection(this.firestore, "citas"), where("sexo", "==", this.sexo));
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        this.citas.push(doc.data()); 
+      });
   }
+
+  async filtroEdad(){
+    this.citas=[];
+    const q = query(collection(this.firestore, "citas"), where("edad", "==", this.edad));
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+      this.citas.push(doc.data()); 
+    });
+}
+
+async filtroPersonas(){
+  this.citas=[];
+  const q = query(collection(this.firestore, "citas"), where("personas", "<", this.personas));
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((doc) => {
+    this.citas.push(doc.data()); 
+  });
+}
+
+  mostrar(){
+    switch (this.opcion) {
+      case 'edad':
+        this.filtroEdad();
+        break;
+      case 'sexo':
+        this.filtroSexo();
+        break;
+      case 'personas':
+        this.filtroPersonas();
+      break;
+      default:
+        
+        break;
+    }
+    
+  }
+
+
+
+
 }
 
 const Toast = Swal.mixin({

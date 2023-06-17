@@ -52,6 +52,7 @@ import { QrcodeComponent } from './qrcode/qrcode.component';
 
 
 import { QRCodeModule } from 'angularx-qrcode';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 
 @NgModule({
@@ -81,6 +82,7 @@ import { QRCodeModule } from 'angularx-qrcode';
     CargandoComponent,
     FormMailComponent,
     QrcodeComponent,
+    UsuariosComponent,
 
   ],
   imports: [
