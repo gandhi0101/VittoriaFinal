@@ -28,11 +28,11 @@ router.get('/qrdata', function (req, res, next) {
       'https://saboryestilo.com.mx/gourmet/ossobuco/'
     ],
     src: [
-      '../../assets/images/lassaña.jpg',
-      '../../assets/images/capresse.jpg',
-      '../../assets/images/pasta-carbonara.webp',
-      '../../assets/images/rissoto.jpg',
-      '../../assets/images/ossobusco.jpg'
+      '/assets/media/QR/lassaña.jpg',
+      '/assets/media/QR/capresse.jpg',
+      '/assets/media/QR/pasta-carbonara.webp',
+      '/assets/media/QR/rissoto.jpg',
+      '/assets/media/QR/ossobusco.jpg'
     ],
     nombre: [
       "Lassaña",

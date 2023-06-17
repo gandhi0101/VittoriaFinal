@@ -19,8 +19,7 @@ export class QrcodeComponent {
   constructor(private qrdata: QrdataService) { }
 
   onChangeURL(url: SafeUrl) {
-    let data = this.consultaDatos(`http://localhost:3000/qrcode`);
-    console.log(data);
+    
     this.qrCodeDownloadLink = url;///link de desarrollo y adaptar el objeto
   }
   
@@ -34,7 +33,7 @@ export class QrcodeComponent {
   }
   lanzarQr() {
     let dataService
-    this.mostrar = true; this.qrdata.reciveData('http:/localhost:3000/qrdata').subscribe((data: any) => {
+    this.mostrar = true; this.qrdata.reciveData('http://localhost:3000/qrdata').subscribe((data: any) => {
       dataService = data;
       console.log("datos", dataService);
       // Realiza el procesamiento adicional con los datos recibidos
