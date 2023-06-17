@@ -30,9 +30,9 @@ export class NavbarComponent implements OnInit {
       }
       if ((user?.emailVerified || user?.phoneNumber) && user) {
           this.usuarioValido=true;
-        console.log('El correo electrónico está verificado');
+        //console.log('El correo electrónico está verificado');
       } else {
-        console.log('El correo electrónico no está verificado');
+        //console.log('El correo electrónico no está verificado');
       }
 
     });
