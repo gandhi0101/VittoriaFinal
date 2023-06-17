@@ -28,6 +28,7 @@ const routes: Routes = [
       {path: 'graficas', component: GraficasComponent},
       {path: 'about/:id/:user', component: WhyUsComponent},
       {path: 'qrcode', component: QrcodeComponent},
+      { path: 'formulario-conacto', component: FormMailComponent },
       {path: '**', pathMatch: 'full', redirectTo: 'home'}
     ]
   },
