@@ -8,7 +8,7 @@ export const environment  = {
     messagingSenderId: '354070476763',
     measurementId: 'G-GP57WVCQ7L',
   },
-    production: false,
+    production: true,
     firebaseConfig: {
         apiKey: "AIzaSyDnDgdEeoejz_iOZ4l--RORXlGQbOK3nxg",
         authDomain: "victtory1-eef5c.firebaseapp.com",
