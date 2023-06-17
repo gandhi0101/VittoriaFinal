@@ -19,7 +19,14 @@ export class QrcodeComponent {
   constructor(private qrdata: QrdataService) { }
 
   onChangeURL(url: SafeUrl) {
-    this.qrCodeDownloadLink = url;
+    let data = this.consultaDatos(`http://localhost:3000/qrcode`);
+    console.log(data);
+    this.qrCodeDownloadLink = url;///link de desarrollo y adaptar el objeto
+  }
+  
+
+  consultaDatos(url:string):any{
+    return this.qrdataService.reciveData(url);
   }
 
   borrarComponente() {

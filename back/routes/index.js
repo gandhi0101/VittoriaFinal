@@ -16,6 +16,26 @@ router.get('/', function (req, res, next) {
 router.get('/about', function (req, res, next) {
   res.send('hola');
 });
+//QR
+function datosrandom() {
+
+  elementos = ['https://www.recetasnestle.com.mx/escuela-sabor/recetas-caseras/como-hacer-lasana',
+    'recetasderechupete.com/ensalada-caprese-receta-facil-y-rapida-de-esta-ensalada-italiana/49628/',
+    'https://www.bonappetit.com/recipe/simple-carbonara',
+    'https://www.directoalpaladar.com/recetas-de-arroces/arroz-a-milanesa-receta-italiana-original-risotto-alla-milanese',
+    'https://saboryestilo.com.mx/gourmet/ossobuco/'];
+  const indiceAleatorio = Math.floor(Math.random() * this.elementos.length);
+  src = ['../../assets/media/QR/lassaña.jpg', '../../assets/images/capresse.jpg',
+    '../../assets/images/pasta-carbonara.webp', '../../assets/images/rissoto.jpg', '../../assets/images/ossobusco.jpg'];
+
+  nombre = ["Lassaña", "Capresse", "Pasta Carbonara", "Rissoto", "Ossobusco"]
+  return elementos[indiceAleatorio]
+}
+router.get('/qrcode', function (req, res) {
+
+  datoMandado = datosrandom()
+  res.json(datoMandado)
+})
 
 router.get('/qrdata', function (req, res, next) {
   const data = {
