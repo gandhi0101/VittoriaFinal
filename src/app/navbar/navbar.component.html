@@ -18,6 +18,7 @@
             <a [routerLink]="['home']" routerLinkActive="active">Inicio</a>
             <a [routerLink]="['about']" routerLinkActive="active">Sobre Nosotros</a>
             <a [routerLink]="['formulario-conacto']" routerLinkActive="active">Contactanos</a>
+            <a *ngIf="usuarioValido " [routerLink]="['contact']" routerLinkActive="active">Reservacion</a>
             <a *ngIf="usuarioValido || isAdmin" [routerLink]="['citas']" routerLinkActive="active">Citas</a>
             <a *ngIf="isAdmin" [routerLink]="['usuarios']" routerLinkActive="active">Usuarios</a>
             <a *ngIf="isAdmin" [routerLink]="['graficas']" routerLinkActive="active">Graficas</a>
