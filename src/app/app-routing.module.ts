@@ -22,15 +22,16 @@ const routes: Routes = [
     component: MainlayoutComponent,
     children: [
 
-      {path: 'home', component: HomeComponent},
-      {path: 'about', component: WhyUsComponent},
-      {path: 'contact', component: ContactComponent},
-      {path: 'citas', component: CitasComponent},
-      {path: 'graficas', component: GraficasComponent},
-      {path: 'about/:id/:user', component: WhyUsComponent},
-      {path: 'qrcode', component: QrcodeComponent},
-      {path: 'usuarios',component:UsuariosComponent},
-      {path: '**', pathMatch: 'full', redirectTo: 'home'}
+      { path: 'home', component: HomeComponent },
+      { path: 'about', component: WhyUsComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'citas', component: CitasComponent },
+      { path: 'graficas', component: GraficasComponent },
+      { path: 'about/:id/:user', component: WhyUsComponent },
+      { path: 'qrcode', component: QrcodeComponent },
+      { path: 'usuarios', component: UsuariosComponent },
+      { path: 'formulario-conacto', component: FormMailComponent },
+      { path: '**', pathMatch: 'full', redirectTo: 'home' }
     ]
   },
   {
