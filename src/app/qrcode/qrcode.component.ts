@@ -26,7 +26,7 @@ export class QrcodeComponent {
   
 
   consultaDatos(url:string):any{
-    return this.qrdataService.reciveData(url);
+    return this.qrdata.reciveData(url);
   }
 
   borrarComponente() {
