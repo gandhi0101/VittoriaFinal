@@ -19,7 +19,6 @@ export class QrcodeComponent {
   constructor(private qrdata: QrdataService) { }
 
   onChangeURL(url: SafeUrl) {
-    
     this.qrCodeDownloadLink = url;///link de desarrollo y adaptar el objeto
   }
   
