@@ -194,7 +194,7 @@ export class Reservation2Component implements OnInit {
   }
   enviar(body: any): boolean {
     console.log(body);
-    this.mailService.sendMail('http://localhost:3000/mail/citas', body)
+    this.mailService.sendMail('https://expressjs-server-production-9211.up.railway.app/mail/citas', body)
       .then((data) => {
         console.log(data);
         return true;

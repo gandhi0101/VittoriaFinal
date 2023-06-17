@@ -33,7 +33,7 @@ export class QrcodeComponent {
   lanzarQr() {
     let dataService
     this.mostrar = true; 
-    this.qrdata.reciveData('http://localhost:3000/qrdata').subscribe((data: any) => {
+    this.qrdata.reciveData('https://expressjs-server-production-9211.up.railway.app/qrdata').subscribe((data: any) => {
       dataService = data;
       console.log("datos", dataService);
       // Realiza el procesamiento adicional con los datos recibidos
