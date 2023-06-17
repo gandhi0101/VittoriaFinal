@@ -22,6 +22,7 @@ const routes: Routes = [
     component: MainlayoutComponent,
     children: [
 
+
       { path: 'home', component: HomeComponent },
       { path: 'about', component: WhyUsComponent },
       { path: 'contact', component: ContactComponent },
@@ -32,6 +33,7 @@ const routes: Routes = [
       { path: 'usuarios', component: UsuariosComponent },
       { path: 'formulario-conacto', component: FormMailComponent },
       { path: '**', pathMatch: 'full', redirectTo: 'home' }
+
     ]
   },
   {
