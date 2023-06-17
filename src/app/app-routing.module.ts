@@ -12,20 +12,25 @@ import { RegistrartelefonoComponent } from './registrartelefono/registrartelefon
 import { LogintelefonoComponent } from './logintelefono/logintelefono.component';
 import { GraficasComponent } from './graficas/graficas.component';
 import { FormMailComponent } from './form-mail/form-mail.component';
+import { QrcodeComponent } from './qrcode/qrcode.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+
 
 const routes: Routes = [
   {
     path: 'inicio',
     component: MainlayoutComponent,
     children: [
-      { path: 'home', component: HomeComponent },
-      { path: 'about', component: WhyUsComponent },
-      { path: 'contact', component: ContactComponent },
-      { path: 'citas', component: CitasComponent },
-      { path: 'graficas', component: GraficasComponent },
-      { path: 'about/:id/:user', component: WhyUsComponent },
-      { path: 'formulario-conacto', component: FormMailComponent },
-      { path: '**', pathMatch: 'full', redirectTo: 'home' }
+
+      {path: 'home', component: HomeComponent},
+      {path: 'about', component: WhyUsComponent},
+      {path: 'contact', component: ContactComponent},
+      {path: 'citas', component: CitasComponent},
+      {path: 'graficas', component: GraficasComponent},
+      {path: 'about/:id/:user', component: WhyUsComponent},
+      {path: 'qrcode', component: QrcodeComponent},
+      {path: 'usuarios',component:UsuariosComponent},
+      {path: '**', pathMatch: 'full', redirectTo: 'home'}
     ]
   },
   {
@@ -41,10 +46,6 @@ const routes: Routes = [
   { path: 'telefonologin', component: LogintelefonoComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 ];
-
-
-
-
 
 
 @NgModule({

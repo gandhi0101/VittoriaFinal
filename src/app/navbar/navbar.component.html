@@ -14,13 +14,15 @@
     </div>
   
     <div class="nav-links">
+            <a [routerLink]="['qrcode']" routerLinkActive="active">QR pureba</a>
             <a [routerLink]="['home']" routerLinkActive="active">Inicio</a>
             <a [routerLink]="['about']" routerLinkActive="active">Sobre Nosotros</a>
-            <a *ngIf="!usuarioValido " [routerLink]="['formulario-conacto']" routerLinkActive="active">contactanos</a>
+            <a *ngIf="!usuarioValido " [routerLink]="['formulario-conacto']" routerLinkActive="active">Contactanos</a>
             <a *ngIf="usuarioValido || isAdmin" [routerLink]="['citas']" routerLinkActive="active">Citas</a>
+            <a *ngIf="isAdmin" [routerLink]="['usuarios']" routerLinkActive="active">Usuarios</a>
             <a *ngIf="isAdmin" [routerLink]="['graficas']" routerLinkActive="active">Graficas</a>
             <a *ngIf="!usuarioValido &&  !isAdmin" (click)="reLogin()">Crear cuenta</a>
             <a *ngIf="usuarioValido || isAdmin" (click)="logOut()">logOut</a>
-        
+            <a disable >{{nombreUsuario}}</a>
     </div>
   </div>
