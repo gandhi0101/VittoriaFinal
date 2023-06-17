@@ -196,6 +196,7 @@
             Juan ha dedicado años a su formación académica y profesional en el ámbito de los sistemas. Se graduó con
             honores en Ingeniería de Sistemas Computacionales de una prestigiosa universidad, donde adquirió una sólida
             base en programación, redes, seguridad informática y administración de sistemas.</p>
+
             <div *ngIf="user == 'AEscareno7'; else noUser" class="githubPerfiles" >
               <h1> {{user}}</h1>
             <img [src]="safeUrl">
@@ -228,6 +229,7 @@
             base en programación, redes, seguridad informática y administración de sistemas.</p>
             <div *ngIf="user == 'Mariana020221'; else noUser" class="githubPerfiles" >
               <h1> {{user}}</h1>
+
             <img [src]="safeUrl">
           </div>
           <ng-template #noUser>
@@ -264,6 +266,7 @@
             programación, redes, seguridad informática y gestión de sistemas.</p>
           <div *ngIf="user == 'BrayanToledo12'; else noUser" class="githubPerfiles">
             <h1> {{user}}</h1>
+
             <img [src]="safeUrl">
           </div>
           <ng-template #noUser>

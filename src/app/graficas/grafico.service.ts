@@ -12,19 +12,14 @@ export class GraficoService {
 
   constructor() { }
 
-  double(graphTitle: string, primaryDatasetKey: string ,labels: any, primaryDataset: any, context: string, charttype: any){
+  double(graphTitle: string, primaryDatasetKey: string ,labels: any, primaryDataset: any, context: string, charttype: any, colores: any){
     var chart = new Chart(context, {
       type: charttype,
       data: {
         labels: labels,
         datasets: [{
           label: primaryDatasetKey,
-          backgroundColor: [
-            'rgb(54, 162, 235)',
-            'rgb(255, 99, 132)',
-            'rgb(255, 205, 86)',
-            'rgb(255, 99, 60)',
-          ],
+          backgroundColor: colores,
           data: primaryDataset
         }]
 

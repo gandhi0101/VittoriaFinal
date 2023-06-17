@@ -1,12 +1,14 @@
+<div class="contenedor">
 <form class="form">
     <p class="form-title">Registrar telefono</p>
     <div class="input-container">
-        <input placeholder="Nombre" type="text" />
+        <input placeholder="Nombre" type="text" #nombre />
     </div>
     <div class="input-container">
         <input placeholder="Codigo" type="text" #codigo/>
     </div>
     <div class="input-container">
     </div>
-    <button class="submit" type="submit" (click)="verificarCodigo(codigo.value)"  >LogIn</button>
+    <button class="submit" type="submit" (click)="verificarCodigo(codigo.value,nombre.value)"  >LogIn</button>
 </form>
+</div>
