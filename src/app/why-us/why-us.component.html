@@ -14,8 +14,8 @@
       </div>
     </div>
     <div class="contenido">
-      <iframe width="560" height="315" [src]="link | video:'https://www.youtube.com/embed/' " title="YouTube video player"
-        frameborder="0"
+      <iframe width="560" height="315" [src]="link | video:'https://www.youtube.com/embed/' "
+        title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
     </div>
@@ -48,12 +48,12 @@
       deja a nuestros clientes felices y satisfechos. Esperamos darle la bienvenida pronto en nuestro restaurante
       y
       hacer de su experiencia gastronómica una memorable.</p>
-      <p style="color: blue; text-align: center;">Proyecto Universitario  (la materia de Tecnologias web)</p>
+    <p style="color: blue; text-align: center;">Proyecto Universitario (la materia de Tecnologias web)</p>
   </div>
 </div>
 
 <div class="integ">
-  
+
   <mat-accordion> <!--Este es un componente de Material-->
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header class="contenedor">
@@ -76,8 +76,8 @@
             gran destreza en la programación de software, el diseño de algoritmos y la resolución de problemas
             complejos. Su capacidad para analizar situaciones y pensar de manera lógica le permite abordar desafíos
             técnicos con eficiencia y efectividad.</p>
-            <div *ngIf="user == 'gandhi0101'; else noUser" class="githubPerfiles" >
-              <h1> {{user}}</h1>
+          <div *ngIf="user == 'gandhi0101'; else noUser" class="githubPerfiles">
+            <h1> {{user}}</h1>
             <img [src]="safeUrl">
           </div>
           <ng-template #noUser>
@@ -108,8 +108,8 @@
             Juan ha dedicado años a su formación académica y profesional en el ámbito de los sistemas. Se graduó con
             honores en Ingeniería de Sistemas Computacionales de una prestigiosa universidad, donde adquirió una sólida
             base en programación, redes, seguridad informática y administración de sistemas.</p>
-            <div *ngIf="user == 'juanMa281'; else noUser" class="githubPerfiles" >
-              <h1> {{user}}</h1>
+          <div *ngIf="user == 'juanMa281'; else noUser" class="githubPerfiles">
+            <h1> {{user}}</h1>
             <img [src]="safeUrl">
           </div>
           <ng-template #noUser>
@@ -139,8 +139,8 @@
             Brayan ha dedicado años a su formación académica y profesional en el campo de los sistemas. Se graduó con
             honores en Ingeniería de Sistemas de una prestigiosa universidad, donde adquirió una sólida base en
             programación, redes, seguridad informática y gestión de sistemas.</p>
-            <div *ngIf="user == 'BrayanToledo12'; else noUser" class="githubPerfiles" >
-              <h1> {{user}}</h1>
+          <div *ngIf="user == 'BrayanToledo12'; else noUser" class="githubPerfiles">
+            <h1> {{user}}</h1>
             <img [src]="safeUrl">
           </div>
           <ng-template #noUser>
@@ -174,8 +174,69 @@
             en soluciones funcionales y robustas. Su capacidad de aprendizaje rápido y su determinación lo han mantenido
             en
             la vanguardia de la industria de la programación.</p>
-            <div *ngIf="user == 'GerardoVazGa'; else noUser" class="githubPerfiles" >
-              <h1> {{user}}</h1>
+          <div *ngIf="user == 'GerardoVazGa'; else noUser" class="githubPerfiles">
+            <h1> {{user}}</h1>
+            <img [src]="safeUrl">
+          </div>
+          <ng-template #noUser>
+            <!-- <p></p> -->
+          </ng-template>
+        </div>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header class="contenedor">
+        <mat-panel-title>
+          little engenier (programmer)
+        </mat-panel-title>
+        <mat-panel-description>
+          Biografía
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <h4 class="nombre">ING. Armando Escareño Perez</h4>
+      <div class="bio">
+        <img src="../../assets/media/integrantes/armando.jpeg" alt="Armando Escareño Perez">
+        <div class="bio1" id="armando">
+          <p>Armando es un profesional apasionado por los sistemas computacionales y la programación web. Armando ha
+            trabajado en varios proyectos desafiantes, desarrollando sistemas y aplicaciones web personalizadas para
+            empresas de diversos sectores. Ha adquirido experiencia en una amplia gama de tecnologías y lenguajes de
+            programación, incluyendo HTML, CSS, JavaScript, PHP y bases de datos como MySQL. Armando es un talentoso profesional
+            de sistemas computacionales con experiencia en programación web. Su pasión por la tecnología, su dedicación y sus
+            habilidades técnicas lo han convertido en un valioso activo en el campo de la programación web, y sigue siendo una
+            figura respetada y admirada en la industria.</p>
+            <div *ngIf="user == 'AEscareno7'; else noUser" class="githubPerfiles">
+            <h1> {{user}}</h1>
+            <img [src]="safeUrl">
+          </div>
+          <ng-template #noUser>
+            <!-- <p></p> -->
+          </ng-template>
+        </div>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header class="contenedor">
+        <mat-panel-title>
+          little engenier (programmer)
+        </mat-panel-title>
+        <mat-panel-description>
+          Biografía
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <h4 class="nombre">ING. Mariana Tinajera Delgadillo</h4>
+      <div class="bio">
+        <img src="../../assets/media/integrantes/mariana.jpg" alt="Mariana Tinajera Delgadillo">
+        <div class="bio1" id="mariana">
+          <p>Mariana es una profesional apasionada por los sistemas computacionales y se especializa en programación web
+            front-end. Mariana ha seguido perfeccionando sus habilidades en el campo de la programación web front-end. Se mantiene
+            actualizada con las últimas tendencias y tecnologías, asistiendo a conferencias y participando en cursos de formación
+            continua. Su pasión por el diseño y su habilidad para crear interfaces web atractivas y funcionales la han convertido
+            en una figura destacada en el campo de la programación web. Su dedicación, conocimientos técnicos y atención al
+            detalle la convierten en una desarrolladora front-end altamente respetada y admirada en la industria.</p>
+          <div *ngIf="user == 'Mariana020221'; else noUser" class="githubPerfiles">
+            <h1> {{user}}</h1>
             <img [src]="safeUrl">
           </div>
           <ng-template #noUser>
