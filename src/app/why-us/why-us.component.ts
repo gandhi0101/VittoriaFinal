@@ -19,7 +19,7 @@ export class WhyUsComponent {
   safeUrl: any;
 
   @ViewChildren(MatExpansionPanel) panels!: QueryList<MatExpansionPanel>;
-  
+
 
   ngAfterViewInit() {
 
@@ -31,10 +31,16 @@ export class WhyUsComponent {
         this.panels.toArray()[1].open();
         break;
       case 'brayan':
-        this.panels.toArray()[2].open();
+        this.panels.toArray()[5].open();
         break;
       case 'gerardo':
+        this.panels.toArray()[2].open();
+        break;
+      case 'armando':
         this.panels.toArray()[3].open();
+        break; 
+      case 'mariana':
+        this.panels.toArray()[4].open();
         break;
       case 'armando':
         this.panels.toArray()[4].open();
@@ -46,17 +52,15 @@ export class WhyUsComponent {
   }
 
 
-  constructor(private rout: ActivatedRoute,private sanitizer: DomSanitizer) { }
+  constructor(private rout: ActivatedRoute, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this.rout.params.subscribe(params => {
       this.id = params['id'];
-      this.user = params['user'];
-      
-      
+      this.user = params['user'];//parece funcionar todo correctamente
     });
-    this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('../assets/media/' + this.user+'.png');
+    this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('../assets/media/' + this.user + '.png');
   }
-  
+
 
 }

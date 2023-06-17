@@ -1,24 +1,22 @@
-<div class="dropdown" (click)="toggleDropdown()">
-    <img class="imgAcces" src="assets/accesibilidad/accesibilidad.png" alt="">
-    <ul [class.open]="isDropdownOpen" id="dropdown-menu" (click)="closeDropdown()">
-        <li class="containeraccs" style="display: flex;">
-            <button (click)="increaseFontSize()"><img class="des"
-                    src="assets/accesibilidad/aumenta-el-tamano-de-la-fuente.png" alt=""></button>
-            <button (click)="decreaseFontSize()"><img class="des"
-                    src="assets/accesibilidad/disminuir-el-tamano-de-la-fuente.png" alt=""></button>
-        </li>
-        <li class="containeraccs"><button (click)="toggleGrayscale()"><img class="des"
-                    src="assets/accesibilidad/escala-de-grises.png" alt=""></button></li>
-        <li class="containeraccs"><button (click)="cambiarFuente()"><img class="des"
-                    src="assets/accesibilidad/redimensionar.png" alt=""></button></li>
-        <li class="containeraccs"><button (click)="reanudarLectura()"><img class="des"
-                    src="assets/accesibilidad/boton-de-play.png" alt=""></button>
-            <button (click)="pausarLectura()"><img class="des" src="assets/accesibilidad/boton-de-pausa.png"
-                    alt=""></button>
-            <button (click)="reiniciarLectura()"><img src="assets/accesibilidad/reanudar.png" class="des"
-                    alt=""></button>
-        </li>
-    </ul>
+<div class="bienvenida">
+    <h1 id="texto1">¡Bienvenidos al</h1>
+    <h1 id="texto2">Restaurante de comida Italiana Vittoria!</h1>
+    <p id="texto3">En nuestro restaurante podrán disfrutar de una gran variedad de platillos típicos de la gastronomía
+        italiana, desde las pastas más clásicas hasta las pizzas más exóticas, todo preparado con los ingredientes más
+        frescos y de la más alta calidad.
+
+        Nuestro objetivo es brindarles una experiencia gastronómica única, donde cada platillo sea una explosión de
+        sabor y cada bocado una aventura culinaria.
+    </p>
+    <div id="integrantes">
+        <a [routerLink]="['../about/gandhi/gandhi0101']" routerLinkActive="active" ><div id="integ1"><img src="../assets/media/integrantes/gandhi.jpg" alt=""><p>Gandhi Cabral Villareal</p></div></a>
+        <a [routerLink]="['../about/juan/juanMa281']" routerLinkActive="active"><div id="integ1"><img src="../assets/media/integrantes/juan.jpg" alt=""><p>Juan Martinez Martinez</p></div></a>
+        <a [routerLink]="['../about/gerardo/GerardoVazGa']" routerLinkActive="active"><div id="integ1"><img src="../assets/media/integrantes/gerardo.jpg" alt=""><p>Gerardo Vazquez Galindo</p></div></a>
+        <a [routerLink]="['../about/brayan/BrayanToledo12']" routerLinkActive="active"><div id="integ1"><img src="../../assets/media/integrantes/brayan.jpeg" alt=""><p>Brayan Toledo Vera</p></div></a>
+        <!-- nuevos integrante -->
+        <a [routerLink]="['../about/armando/AEscareno7']" routerLinkActive="active"><div id="integ1"><img src="../assets/media/integrantes/armando.jpeg" alt=""><p>Armando Escareño Perez</p></div></a>
+        <a [routerLink]="['../about/mariana/Mariana020221']" routerLinkActive="active"><div id="integ1"><img src="https://avatars.githubusercontent.com/u/118236385?v=4" alt=""><p>Mariana Tinajera Delgadillo </p></div></a>
+    </div>
 </div>
 <!--fin menú accesibilidad-->
 <div id="contenido">
