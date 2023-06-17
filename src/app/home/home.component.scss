@@ -322,10 +322,13 @@
 }
 
 .qrcode{
-  width: 300px;
+  width: 450px;
   height: 600px;
 
-  border: 1px solid black;
+  background-color: #071514;
+  border-radius: 15px;
+  
+  box-shadow: 8px 6px 10px gray;
   margin: 0 auto;
 
   display: flex;
