@@ -51,9 +51,7 @@ export class WhyUsComponent {
   ngOnInit() {
     this.rout.params.subscribe(params => {
       this.id = params['id'];
-      this.user = params['user'];
-
-
+      this.user = params['user'];//parece funcionar todo correctamente
     });
     this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('../assets/media/' + this.user + '.png');
   }
