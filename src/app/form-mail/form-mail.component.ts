@@ -164,7 +164,7 @@ export class FormMailComponent {
 
   enviar(body: any): boolean {
     console.log(body);
-    this.mailService.sendMail('http://localhost:3000/mail', body)
+    this.mailService.sendMail('https://expressjs-server-production-9211.up.railway.app/mail', body)
       .then((data) => {
         console.log(data);
         return true;
