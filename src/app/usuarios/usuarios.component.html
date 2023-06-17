@@ -1,0 +1,33 @@
+<div *ngIf="!isUpdate; else cargado" class="spinner">
+  <div class="loading">
+    <app-spinner></app-spinner>
+  </div>
+</div>
+
+<ng-template #cargado>
+  <div *ngIf="!usuarios.length; else cita" class="alert alert-danger">
+    No hay usuarios
+  </div>
+  <ng-template #cita>
+    <div class="citas">
+      <div class="titulo">
+        <h2>Usuarios</h2>
+        <hr />
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>UID</th>
+            <th>Metodo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dato of usuarios">
+            <td>{{ dato.providerData[0].uid }}</td>
+            <th>{{ dato.providerData[0].providerId=="phone" ? 'Numero de Telefono' : 'Correo electronico' }}</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-template>
+</ng-template>

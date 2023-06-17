@@ -22,6 +22,8 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.afAtth.authState.subscribe((user)=>{
+      console.log(user);
+      
       this.nombreUsuario = user?.displayName ?? '';
       if(user?.email == 'admin@gmail.com' ){
         this.isAdmin=true;

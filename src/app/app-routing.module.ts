@@ -13,6 +13,7 @@ import { LogintelefonoComponent } from './logintelefono/logintelefono.component'
 import { GraficasComponent } from './graficas/graficas.component';
 import { FormMailComponent } from './form-mail/form-mail.component';
 import { QrcodeComponent } from './qrcode/qrcode.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 
 const routes: Routes = [
@@ -21,15 +22,18 @@ const routes: Routes = [
     component: MainlayoutComponent,
     children: [
 
-      {path: 'home', component: HomeComponent},
-      {path: 'about', component: WhyUsComponent},
-      {path: 'contact', component: ContactComponent},
-      {path: 'citas', component: CitasComponent},
-      {path: 'graficas', component: GraficasComponent},
-      {path: 'about/:id/:user', component: WhyUsComponent},
-      {path: 'qrcode', component: QrcodeComponent},
+
+      { path: 'home', component: HomeComponent },
+      { path: 'about', component: WhyUsComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'citas', component: CitasComponent },
+      { path: 'graficas', component: GraficasComponent },
+      { path: 'about/:id/:user', component: WhyUsComponent },
+      { path: 'qrcode', component: QrcodeComponent },
+      { path: 'usuarios', component: UsuariosComponent },
       { path: 'formulario-conacto', component: FormMailComponent },
-      {path: '**', pathMatch: 'full', redirectTo: 'home'}
+      { path: '**', pathMatch: 'full', redirectTo: 'home' }
+
     ]
   },
   {
