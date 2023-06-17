@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SafeUrl } from '@angular/platform-browser';
+import { QrdataService } from '../qrdata.service';
 
 @Component({
   selector: 'app-qrcode',
@@ -7,28 +8,16 @@ import { SafeUrl } from '@angular/platform-browser';
   styleUrls: ['./qrcode.component.scss']
 })
 export class QrcodeComponent {
-  mostrar!: boolean;
-  public name: any;
-  public foto: any;
-  public myAngularxQrCode: any;
-  elementos: string[] = ['https://www.recetasnestle.com.mx/escuela-sabor/recetas-caseras/como-hacer-lasana',
-    'recetasderechupete.com/ensalada-caprese-receta-facil-y-rapida-de-esta-ensalada-italiana/49628/',
-    'https://www.bonappetit.com/recipe/simple-carbonara',
-    'https://www.directoalpaladar.com/recetas-de-arroces/arroz-a-milanesa-receta-italiana-original-risotto-alla-milanese',
-    'https://saboryestilo.com.mx/gourmet/ossobuco/'];
-  src: string[] = ['../../assets/images/lassaña.jpg', '../../assets/images/capresse.jpg',
-    '../../assets/images/pasta-carbonara.webp', '../../assets/images/rissoto.jpg', '../../assets/images/ossobusco.jpg'];
-
-  nombre: string[]=["Lassaña","Capresse","Pasta Carbonara","Rissoto","Ossobusco"]
-  public qrCodeDownloadLink: SafeUrl = '';
-  constructor() {
-    const indiceAleatorio = Math.floor(Math.random() * this.elementos.length);
-    this.myAngularxQrCode = this.elementos[indiceAleatorio];
-    this.foto = this.src[indiceAleatorio];
-    this.name = this.nombre[indiceAleatorio];
-    console.log(this.myAngularxQrCode);
-
+  datos = {
+    name: undefined,
+    foto: undefined,
+    QrCode: ''
   }
+
+  public qrCodeDownloadLink: SafeUrl = '';
+  mostrar: boolean = false;
+  constructor(private qrdata: QrdataService) { }
+
   onChangeURL(url: SafeUrl) {
     this.qrCodeDownloadLink = url;
   }
@@ -37,7 +26,19 @@ export class QrcodeComponent {
     this.mostrar = false;
   }
   lanzarQr() {
-    this.mostrar = true;
+    let dataService
+    this.mostrar = true; this.qrdata.reciveData('http:/localhost:3000/qrdata').subscribe((data: any) => {
+      dataService = data;
+      console.log("datos", dataService);
+      // Realiza el procesamiento adicional con los datos recibidos
+      this.datos.QrCode = dataService.elemento;
+      this.datos.foto = dataService.src
+      this.datos.name = dataService.nombre
+      this.onChangeURL(this.datos.QrCode);
+    });
+    //console.log("datos", this.datos);
+    
+    
   }
 
 }
