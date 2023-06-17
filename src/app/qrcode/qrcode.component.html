@@ -1,6 +1,6 @@
 
-<div class="container">
-    <button id="boot" class="btn btn-dark" (click)="mostrar ? borrarComponente() : lanzarQr()">
+<div class="container cQr">
+    <button id="boot" class="btn btn-dark centrarImg" (click)="mostrar ? borrarComponente() : lanzarQr()">
       {{ mostrar ? 'Borrar Platillo' : 'Nuevo Platillo' }}
     </button>
   </div>
@@ -8,7 +8,7 @@
   <div *ngIf="mostrar">
 
     <div class="card" style="width: 18rem;">
-        <img [src]="datos.foto" class="card-img-top" alt="...">
+        <img [src]="datos.foto" class="card-img-top centrarImg" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{ datos.name }}</h5>
           <div class="row">
