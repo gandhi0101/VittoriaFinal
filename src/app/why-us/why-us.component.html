@@ -14,8 +14,8 @@
       </div>
     </div>
     <div class="contenido">
-      <iframe width="560" height="315" [src]="link | video:'https://www.youtube.com/embed/' " title="YouTube video player"
-        frameborder="0"
+      <iframe width="560" height="315" [src]="link | video:'https://www.youtube.com/embed/' "
+        title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
     </div>
@@ -25,35 +25,43 @@
     <h2>Vittoria</h2>
     <p>Bienvenidos a Vittoria, un restaurante que ofrece auténtica
       cocina
-      italiana en un ambiente acogedor y elegante. Fundado en 1995 por la familia Rossi, Vittoria ha sido un
+      italiana en un ambiente acogedor y elegante. Fundado en 1995 por la
+      familia Rossi, Vittoria ha sido un
       destino
       de
       comida italiana en la ciudad desde entonces.</p>
 
     <p>En Vittoria, nos apasiona la comida italiana y creemos que la
-      mejor manera de disfrutarla es mediante la utilización de ingredientes frescos y de alta calidad. Es por eso
+      mejor manera de disfrutarla es mediante la utilización de ingredientes
+      frescos y de alta calidad. Es por eso
       que
-      trabajamos con proveedores locales para garantizar que nuestras pastas, salsas y platos principales sean lo
+      trabajamos con proveedores locales para garantizar que nuestras pastas,
+      salsas y platos principales sean lo
       más
       auténticos y sabrosos posible.</p>
 
     <p>Nos esforzamos por ofrecer una experiencia gastronómica
-      inolvidable a nuestros clientes, ya sea que vengan a disfrutar de una cena romántica para dos, una reunión
+      inolvidable a nuestros clientes, ya sea que vengan a disfrutar de una cena
+      romántica para dos, una reunión
       de
-      negocios o una cena en familia. Nuestro personal amable y experimentado está siempre a su disposición para
-      ayudarle a seleccionar el plato perfecto y ofrecer sugerencias de vino para complementar su comida.</p>
+      negocios o una cena en familia. Nuestro personal amable y experimentado
+      está siempre a su disposición para
+      ayudarle a seleccionar el plato perfecto y ofrecer sugerencias de vino
+      para complementar su comida.</p>
 
     <p>En Vittoria, nos enorgullece crear una experiencia culinaria
       que
-      deja a nuestros clientes felices y satisfechos. Esperamos darle la bienvenida pronto en nuestro restaurante
+      deja a nuestros clientes felices y satisfechos. Esperamos darle la
+      bienvenida pronto en nuestro restaurante
       y
       hacer de su experiencia gastronómica una memorable.</p>
-      <p style="color: blue; text-align: center;">Proyecto Universitario  (la materia de Tecnologias web)</p>
+    <p style="color: blue; text-align: center;">Proyecto Universitario (la
+      materia de Tecnologias web)</p>
   </div>
 </div>
 
 <div class="integ">
-  
+
   <mat-accordion> <!--Este es un componente de Material-->
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header class="contenedor">
@@ -68,16 +76,21 @@
       <div class="bio">
         <img src="../../assets/media/integrantes/gandhi.jpg" alt="Gerardo Vazquez Galindo">
         <div class="bio1" id="gandhi">
-          <p>Gandhi es un destacado programador con una amplia experiencia y conocimientos en el mundo de la tecnología
-            y el desarrollo de software. Desde una edad temprana, su curiosidad y pasión por la programación lo llevaron
+          <p>Gandhi es un destacado programador con una amplia experiencia y
+            conocimientos en el mundo de la tecnología
+            y el desarrollo de software. Desde una edad temprana, su curiosidad
+            y pasión por la programación lo llevaron
             a adquirir habilidades sólidas en diversos lenguajes y plataformas.
 
-            Con una formación académica sólida en Ingeniería en Sistemas Computacionales, Gandhi ha desarrollado una
-            gran destreza en la programación de software, el diseño de algoritmos y la resolución de problemas
-            complejos. Su capacidad para analizar situaciones y pensar de manera lógica le permite abordar desafíos
+            Con una formación académica sólida en Ingeniería en Sistemas
+            Computacionales, Gandhi ha desarrollado una
+            gran destreza en la programación de software, el diseño de
+            algoritmos y la resolución de problemas
+            complejos. Su capacidad para analizar situaciones y pensar de manera
+            lógica le permite abordar desafíos
             técnicos con eficiencia y efectividad.</p>
-            <div *ngIf="user == 'gandhi0101'; else noUser" class="githubPerfiles" >
-              <h1> {{user}}</h1>
+          <div *ngIf="user == 'gandhi0101'; else noUser" class="githubPerfiles">
+            <h1> {{user}}</h1>
             <img [src]="safeUrl">
           </div>
           <ng-template #noUser>
@@ -88,6 +101,81 @@
       </div>
     </mat-expansion-panel>
 
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header class="contenedor">
+        <mat-panel-title>
+          little engenier (programmer)
+        </mat-panel-title>
+        <mat-panel-description>
+          Biografía
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <h4 class="nombre">ING. Juan Manuel Martinez Martinez</h4>
+      <div class="bio" id="juan">
+        <img src="../../assets/media/integrantes/juan.jpg" alt="Gerardo Vazquez Galindo">
+        <div class="bio1">
+          <p>Juan es un reconocido experto en sistemas con una amplia
+            experiencia y conocimientos en el campo de la
+            tecnología. Desde muy joven, demostró un gran interés y habilidad en
+            el área de la informática, lo que lo
+            llevó a convertirse en un especialista en sistemas altamente
+            competente.
+
+            Juan ha dedicado años a su formación académica y profesional en el
+            ámbito de los sistemas. Se graduó con
+            honores en Ingeniería de Sistemas Computacionales de una prestigiosa
+            universidad, donde adquirió una sólida
+            base en programación, redes, seguridad informática y administración
+            de sistemas.</p>
+          <div *ngIf="user == 'juanMa281'; else noUser" class="githubPerfiles">
+            <h1> {{user}}</h1>
+            <img [src]="safeUrl">
+          </div>
+          <ng-template #noUser>
+            <!-- <p></p> -->
+          </ng-template>
+        </div>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header class="contenedor">
+        <mat-panel-title>
+          little engenier (programmer)
+        </mat-panel-title>
+        <mat-panel-description>
+          Biografía
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <h4 class="nombre">ING. Gerardo Vazquez Galindo</h4>
+      <div class="bio">
+        <img src="../../assets/media/integrantes/gerardo.jpg" alt="Gerardo Vazquez Galindo">
+        <div class="bio1" id="gerardo">
+          <p>Gerardo es un talentoso programador con una sólida formación
+            académica en Ingeniería en Sistemas
+            Computacionales. Posee habilidades sólidas en programación de
+            software, diseño de algoritmos y resolución de
+            problemas complejos. Es especialista en desarrollo web y está
+            familiarizado con lenguajes como JavaScript,
+            HTML,
+            CSS y frameworks populares como React y Angular.
+
+            A lo largo de su carrera, Gerardo ha demostrado ser capaz de
+            comprender los requisitos del cliente y
+            traducirlos
+            en soluciones funcionales y robustas. Su capacidad de aprendizaje
+            rápido y su determinación lo han mantenido
+            en
+            la vanguardia de la industria de la programación.</p>
+          <div *ngIf="user == 'GerardoVazGa'; else noUser" class="githubPerfiles">
+            <h1> {{user}}</h1>
+            <img [src]="safeUrl">
+          </div>
+          <ng-template #noUser>
+            <!-- <p></p> -->
+          </ng-template>
+        </div>
+      </div>
+    </mat-expansion-panel>
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header class="contenedor">
         <mat-panel-title>
@@ -117,8 +205,7 @@
           </ng-template>
         </div>
       </div>
-    </mat-expansion-panel>
-
+    </mat-expansion-panel>    
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header class="contenedor">
         <mat-panel-title>
@@ -128,18 +215,48 @@
           Biografía
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <h4 class="nombre">ING. Brayan De Jesus Toledo Vera</h4>
-      <div class="bio">
-        <img src="../../assets/media/integrantes/brayan.jpeg" alt="Gerardo Vazquez Galindo">
-        <div class="bio1" id="brayan">
-          <p>Brayan es un experto en sistemas con una amplia experiencia y conocimientos en el ámbito de la tecnología.
-            Desde joven, demostró un gran interés y habilidad en el mundo de la informática, lo que lo llevó a
-            especializarse en sistemas y convertirse en un profesional altamente competente.
+      <h4 class="nombre">ING. Armando Escareño Perez</h4>
+      <div class="bio" id="juan">
+        <img src="../../assets/media/integrantes/armando.jpeg" alt="">
+        <div class="bio1">
+          <p>Armando es un reconocido experto en sistemas con una amplia experiencia y conocimientos en el campo de la
+            tecnología. Desde muy joven, demostró un gran interés y habilidad en el área de la informática, lo que lo
+            llevó a convertirse en un especialista en sistemas altamente competente.
 
-            Brayan ha dedicado años a su formación académica y profesional en el campo de los sistemas. Se graduó con
-            honores en Ingeniería de Sistemas de una prestigiosa universidad, donde adquirió una sólida base en
-            programación, redes, seguridad informática y gestión de sistemas.</p>
-            <div *ngIf="user == 'BrayanToledo12'; else noUser" class="githubPerfiles" >
+            Juan ha dedicado años a su formación académica y profesional en el ámbito de los sistemas. Se graduó con
+            honores en Ingeniería de Sistemas Computacionales de una prestigiosa universidad, donde adquirió una sólida
+            base en programación, redes, seguridad informática y administración de sistemas.</p>
+            <div *ngIf="user == 'AEscareno7'; else noUser" class="githubPerfiles" >
+              <h1> {{user}}</h1>
+            <img [src]="safeUrl">
+          </div>
+          <ng-template #noUser>
+            <!-- <p></p> -->
+          </ng-template>
+        </div>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header class="contenedor">
+        <mat-panel-title>
+          little engenier (programmer)
+        </mat-panel-title>
+        <mat-panel-description>
+          Biografía
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <h4 class="nombre">ING. Mariana Tinajera Delgadillo</h4>
+      <div class="bio" id="juan">
+        <img src="https://avatars.githubusercontent.com/u/118236385?v=4" alt="Gerardo Vazquez Galindo">
+        <div class="bio1">
+          <p>Mariana es un reconocido experto en sistemas con una amplia experiencia y conocimientos en el campo de la
+            tecnología. Desde muy joven, demostró un gran interés y habilidad en el área de la informática, lo que lo
+            llevó a convertirse en un especialista en sistemas altamente competente.
+
+            Juan ha dedicado años a su formación académica y profesional en el ámbito de los sistemas. Se graduó con
+            honores en Ingeniería de Sistemas Computacionales de una prestigiosa universidad, donde adquirió una sólida
+            base en programación, redes, seguridad informática y administración de sistemas.</p>
+            <div *ngIf="user == 'Mariana020221'; else noUser" class="githubPerfiles" >
               <h1> {{user}}</h1>
             <img [src]="safeUrl">
           </div>
@@ -159,23 +276,24 @@
           Biografía
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <h4 class="nombre">ING. Gerardo Vazquez Galindo</h4>
+      <h4 class="nombre">ING. Brayan De Jesus Toledo Vera</h4>
       <div class="bio">
-        <img src="../../assets/media/integrantes/gerardo.jpg" alt="Gerardo Vazquez Galindo">
-        <div class="bio1" id="gerardo">
-          <p>Gerardo es un talentoso programador con una sólida formación académica en Ingeniería en Sistemas
-            Computacionales. Posee habilidades sólidas en programación de software, diseño de algoritmos y resolución de
-            problemas complejos. Es especialista en desarrollo web y está familiarizado con lenguajes como JavaScript,
-            HTML,
-            CSS y frameworks populares como React y Angular.
+        <img src="../../assets/media/integrantes/brayan.jpeg" alt="Gerardo Vazquez Galindo">
+        <div class="bio1" id="brayan">
+          <p>Brayan es un experto en sistemas con una amplia experiencia y
+            conocimientos en el ámbito de la tecnología.
+            Desde joven, demostró un gran interés y habilidad en el mundo de la
+            informática, lo que lo llevó a
+            especializarse en sistemas y convertirse en un profesional altamente
+            competente.
 
-            A lo largo de su carrera, Gerardo ha demostrado ser capaz de comprender los requisitos del cliente y
-            traducirlos
-            en soluciones funcionales y robustas. Su capacidad de aprendizaje rápido y su determinación lo han mantenido
-            en
-            la vanguardia de la industria de la programación.</p>
-            <div *ngIf="user == 'GerardoVazGa'; else noUser" class="githubPerfiles" >
-              <h1> {{user}}</h1>
+            Brayan ha dedicado años a su formación académica y profesional en el
+            campo de los sistemas. Se graduó con
+            honores en Ingeniería de Sistemas de una prestigiosa universidad,
+            donde adquirió una sólida base en
+            programación, redes, seguridad informática y gestión de sistemas.</p>
+          <div *ngIf="user == 'BrayanToledo12'; else noUser" class="githubPerfiles">
+            <h1> {{user}}</h1>
             <img [src]="safeUrl">
           </div>
           <ng-template #noUser>
